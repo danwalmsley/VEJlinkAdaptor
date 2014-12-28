@@ -1,0 +1,3148 @@
+<html>
+
+<head>
+  <title>Release notes</title>
+</head>
+
+<style>
+  H2, H3, H4 { color: blue }
+  H1, H2, H3, H4, H5 { font-family: Arial, Helvetica, sans-serif;}
+  PRE {  color: black;  margin-left: 2%; }
+  BODY { color: black;  margin-left: 2%; font-family: Verdana, Arial, Helvetica, sans-serif; font-size=75%}
+  table{ color: black;  font-family: Verdana; font-size=100%}
+  .maintext {
+    font-size: 10px;
+    color: #000000;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  h1.newsbox {
+    color: #FFFFFF;
+    font-weight: bold;
+    font-size: 13px;
+    padding-left: 10px;
+    background: #526194 no-repeat right;
+    border: thin solid #000000;
+    margin-right: 5px;
+    margin-left: 5px;
+  }
+  .heading2 {
+    color: #336699;
+    font-weight: bold;
+    font-size: 12px;
+    padding-left: 25px;
+  }
+</style>
+
+<body bgcolor="#FFFFFF">
+  <!--  Modifiable information starts here ----------------------------------------->
+  <h2>Release notes for J-Flash V4.90c</h2>
+  <p class="maintext"></p>
+  <ol class="maintext">
+    <li><a href=#features>New features</a></li>
+    <li><a href=#improvements>Improvements</a></li>
+    <li><a href=#pcorr>Program corrections</a></li>
+    <li><a href=#problems>Known problems</a></li>
+    <li><a href=#history>Release history</a></li>
+    <li><a href=#misc>Miscellaneous</a></li>
+  </ol>
+  <!-------------------------------------------------------------------------->
+  <!-- NEW FEATURES                                                         -->
+  <!-------------------------------------------------------------------------->
+  <h1 class="newsbox"><a name="features">New features</a></h1>
+  <h2 class="heading2">Version 4.90c</h2>
+  <ol class="maintext">
+    <li>Added flash programming support of the "Information Block - Lock Bits" for Silicon Labs EFM32 series devices.</li>
+    <li>Added flash programming support for NXP LPC11E66 series.</li>
+    <li>Added flash programming support for ST STM32F303x6, STM32F303x8, STM32F411xx and STM32L06xxx devices.</li>
+    <li>Added flash programming support for Freescale KV40, KV43, KV44, KV45 and KV46 devices. (Cortex-M4)</li>
+    <li>Sample project RX610_16bit_CFIFlash.jflash added.</li>
+    <li>Sample project R5F56108_IntFlash_16bit_CFIFlash.jflash added.</li>
+  </ol> 
+  <h2 class="heading2">Version 4.90</h2>
+  <ol class="maintext">
+    <li>Added flash programming support for Atmel ATSAM4CP16C, ATSAMD09C13, ATSAMD10 and ATSAMD11 series.</li>
+  </ol> 
+  <h2 class="heading2">Version 4.88</h2>
+  <ol class="maintext">
+    <li>Added flash programming support for TMPM343xxxxx devices. (Cortex-M3)</li>
+    <li>Added flash programming support for TMPM375FSDMG devices. (Cortex-M3)</li>
+    <li>Added flash programming support for TMPM461F10xx, TMPM461F15xx, TMPM462F10xx and TMPM462F15xx devices. (Cortex-M4)</li>
+    <li>Added flash programming support for Nordic Semi nRF51422_xxAC and nRF51822_xxAC devices.</li>
+    <li>Added flash programming support for ST STM32L0x1, STM32L0x2 and STM32L0x3 devices. (Cortex-M0)</li>
+    <li>Improved PLL init of LPC29xx sample projects.</li>
+    <li>Added Freescale MK24FN256xxx12</li>
+    <li>Flasher PPC: Added support for SPC560D30, SPC560D40, SPC560P34, SPC560P40</li>
+  </ol> 
+  <h2 class="heading2">Version 4.86</h2>
+  <ol class="maintext">
+    <li>Added flash programming support for Freescale MKL13, MKL23 and MKL33 devices.</li>
+    <li>Added flash programming support for MAXIM MAX32550 devices.</li>
+    <li>Added flash programming support for NXP LPC11E67, LPC11E68, LPC11U67 and LPC11U68 devices.</li>
+    <li>Added flash programming support for PSoC4A-BLE devices. (Cortex-M0)</li>
+    <li>Added flash programming support for ST STA8088 (SAL version) + external 2MB flash devices. (ARM946E-S)</li>
+    <li>Added flash programming support for ST STA8088 external SQI flash. (ARM946E-S)</li>
+    <li>Added flash programming support for ST STM32F078CB, STM32F078RB and STM32F078VB devices.</li>
+    <li>Added flash programming support for ST STM32L162ZE devices.</li>
+    <li>Added flash programming support for Silicon Labs EM358x devices.</li>
+    <li>QSPI flash programming support for Vybrid Cortex-A5 devices added.</li>
+    <li>QSPI parallel mode flash programming support for Vybrid Cortex-A5 devices added.</li>
+    <li>Addedd support for merging data files with overlapping areas.</li>
+  </ol> 
+  <h2 class="heading2">Version 4.84b</h2>
+  <ol class="maintext">
+    <li>Added flash programming support for ST STM32F078CB, STM32F078RB and STM32F078VB devices.</li>
+  </ol> 
+  <h2 class="heading2">Version 4.84</h2>
+  <ol class="maintext">
+    <li>Added full J-Link support for Toshiba TMPM351 devices. (Cortex-M3)</li>
+    <li>Added full J-Link support for NXP LPC15xx devices. (Cortex-M3)</li>
+    <li>Added full J-Link support for Spansion MB9AF120/420 devices. (Cortex-M3)</li>
+    <li>Added full J-Link support for Actel (now Microsemi) A2F060M3x, A2F200M3x and A2F500M3x devices. (Cortex-M3)</li>
+    <li>Added flash programming support for TI TM4C1294KCPDT, TM4C1297NCZAD,
+                                               TM4C1299KCZAD, TM4C1299NCZAD,
+                                               TM4C129EKCPDT, TM4C129LNCZAD,
+                                               TM4C129XKCZAD</li>
+    <li>Added full J-Link support for Freescale KW01 devices. (Cortex-M0)</li>
+    <li>Added sample projects for NXP LPC15xx devices. (Cortex-M3)</li>
+    <li>Added sample projects for Actel (now Microsemi) A2F060M3x, A2F200M3x and A2F500M3x devices. (Cortex-M3)</li>
+  </ol>
+  <h2 class="heading2">Version 4.82</h2>
+  <ol class="maintext">
+    <li>Infineon XMC1000 series devices device names changed. (Old names are still accepted).</li>
+    <li>Added flash programming support for Infineon XMC1100-0008.</li>
+    <li>Added full J-Link support for Freescale KL03 series.</li>
+    <li>Added full J-Link support for Toshiba TMPM358 device.</li>
+    <li>Added full J-Link support for Freescale KE06 series.</li>
+    <li>Added full J-Link support for Freescale KE04 series.</li>
+    <li>Added full J-Link support for ST LIS331EB (Cortex-M0).</li>
+    <li>Added support for programming customer information block of Ember/SiLabs EM351/357 devices.</li>
+    <li>Added full J-Link support for ST STM32F042 series devices. (Cortex-M0)</li>
+    <li>Added full J-Link support for ST STM32F401 series devices. (Cortex-M4)</li>
+    <li>Added full J-Link support for Toshiba TMPM358FDTFG. (Cortex-M3)</li>
+    <li>Added full J-Link support for ST STM32L151xE, STM32L152xE series devices.</li>
+    <li>Added full J-Link support for ST STM32F031 series devices. (Cortex-M0)</li>
+    <li>Added full J-Link support for ST STM32F071 series devices. (Cortex-M0)</li>
+    <li>Added full J-Link support for ST STM32F072 series devices. (Cortex-M0)</li>
+    <li>Added full J-Link support for Freescale Kinetis MK22FN256xxx12, MK22FN512xxx12 series devices (Cortex-M4).</li>
+    <li>Added full J-Link support for Freescale Kinetis V31-series devices (Cortex-M4).</li>
+    <li>Added full J-Link support for Spansion FM0+ series devices. (Cortex-M0+)</li>
+    <li>Added flash programming support for Spansion MB9BF128S/T, MB9BF129S/T,</li>
+                                                     MB9BF328S/T, MB9BF329S/T,</li>
+                                                     MB9BF428S/T, MB9BF429S/T,</li>
+                                                     MB9BF528S/T, MB9BF529S/T</li>
+    <li>Added full J-Link support for Freescale W-series devices. (Cortex-M4)</li>
+    <li>Added sample project for ST STM32F4x9I 1x16 CFI NOR flash on nCS0.</li>
+    <li>Added parallel NOR flash SST SST39VF1681, SST39VF1682</li>
+    <li>Added new feature which allows turning off power supply via pin-19 when closing J-Flash if configured in project settings.</li>
+    <li>Added support for Atmel ATSAMG51/53/54 devices.</li>
+    <li>Added option byte programming support for ST STM32L series.</li>
+    <li>Added secure/unsecure support for ST STM32L series.</li>
+    <li>Added sample projects for Freescale KW series.</li>
+    <li>Added sample projects for Spansion MB9AFxxxx, MB9BFxxxx and S6E1Axxx devices.</li>
+    <li>Added sample projects for ST STM32F072 series devices. (Cortex-M0)</li>
+    <li>Added sample projects for Freescale Kinetis V31-series devices (Cortex-M4).</li>
+    <li>Added example project for Renesas RZ (Cortex-A9) parallel CFI NOR flash programming.</li>
+    <li>Added example project: STM32F405OE_OptBytes.jflash</li>
+    <li>ser Guide: Added description for STM32F2 / STM32F4 option byte programming support. See device specifics section.</li>
+  </ol>
+  <h2 class="heading2">Version 4.80</h2>
+  <ol class="maintext">
+    <li>Added QSPI flash programming support for Renesas RZ devices.</li>
+    <li>Added support for MicroSemi SmartFusion2 series devices. (M2S005, M2S025, M2S050, M2S080, M2S120)</li>
+    <li>Added support for Freescale KV10 series devices.</li>
+    <li>Added flash programming support for Freescale MK21FN1M0xxx12, MK21FX512xxx12, MK22FN1M0xxx12, MK22FX512xxx12 series devices.</li>
+    <li>Added flash programming support for Toshiba TMPM350FDTFG.</li>
+    <li>Added flash programming support for Renesas R5F5631F, R5F5631G, R5F5631J, R5F5631K, R5F5631M, R5F5631N, R5F5631P, R5F5631W, R5F5631Y</li>
+    <li>Added flash programming support for Renesas R5F563NF, R5F563NG, R5F563NJ, R5F563NK, R5F563NW, R5F563NY</li>
+    <li>Added full J-Link / Flasher support (Flash download + unlimited number of breakpoints in flash) for Toshiba TMPM36BF10FG (Cortex-M3).</li>
+    <li>Added full J-Link / Flasher support (Flash download + unlimited number of breakpoints in flash) for Toshiba ATSAM4CMS16C (Cortex-M4).</li>
+    <li>Added full J-Link / Flasher support (Flash download + unlimited number of breakpoints in flash) for Silicon Labs SiM3C1xx, SiM3L1xx and SiM3U1xx devices.</li>
+    <li>Added sample projects for Silicon Labs SiM3C1xx, SiM3L1xx and SiM3U1xx devices.</li>
+    <li>Added command line option for merging data files (-merge).</li>
+    <li>Added Cutera LH28F128BFHED-473 parallel NOR flash to the list of selectable NOR flash devices.</li>
+    <li>Added sample projects for Renesas RZ devices.</li>
+    <li>Added sample projects for MicroSemi SmartFusion2 series devices. (M2S005, M2S025, M2S050, M2S080, M2S120)</li>
+    <li>Added sample projects for Freescale KV10 series devices.</li>
+  </ol>
+  <h2 class="heading2">Version 4.78</h2>
+  <ol class="maintext">
+    <li>Added support for Analog Device CM40x series.</li>
+    <li>Added support for Energy Micro Zero Gecko series.</li>
+    <li>Added support for Atmel SAM4E series devices.</li>
+    <li>Added support for Infineons Econometer series (UMF1110, UMF1120, UMF5110, UMF5120).</li>
+    <li>Added support for Toshiba TMPM440 series.</li>
+    <li>Added support for Texas Instrument TM4C and TM4E series.</li>
+    <li>Added support for Fujitsu FM4 series.</li>
+    <li>Options -> Project settings -> Flash now shows absolute sector addresses in detailed sector view.</li>
+    <li>Added sample projects for Atmel SAM4C and SAM4E series devices.</li>
+    <li>Added sample projects for Analog Device CM40x series.</li>
+    <li>Added sample projects for Energy Micro Zero Gecko series.</li>
+    <li>Added sample projects for Infineons Econometer series.</li>
+    <li>Added sample projects for Texas Instrument TMS570LS, RM42 and RM46 devices.</li>
+    <li>Added sample projects for Texas Instrument TM4C and TM4E series.</li>
+    <li>Added sample projects for Toshiba TMPM440 series.</li>
+    <li>Max. selectable RAMSize to be used by J-Flash for programming, extended to 512 KB (for devices which provide that much RAM).</li>
+  </ol>
+  <h2 class="heading2">Version 4.76</h2>
+  <ol class="maintext">
+    <li>Added support for Analog Devices ADuCM320.</li>
+    <li>Added support for ST STM32F052 series.</li>
+    <li>Added support for Marvell 88MC200 series MCUs.</li>
+    <li>Added support for ST STM32F429 series.</li>
+    <li>Added support for ST STM32F439 series.</li>
+    <li>Added sample project for ST STM32F429ZI
+    <li>Added support for Reneasas R-IN32M3 series CPUs.</li>
+    <li>Added support for ST STM32F030 series CPUs.</li>
+    <li>Added support for Renesas RX210 series devices.</li>
+    <li>Added support for Renesas RX111 series devices.</li>
+    <li>Added sample project for Analog Devices ADuCM320.</li>
+    <li>Added sample project for Atmel AT91SAM9261 + DataFlash on SPI0.</li>
+    <li>Added sample projects for ST STM32F030 series CPUs.</li>
+    <li>Added sample projects for Reneasas R-IN32M3 series CPUs.</li>
+  </ol>
+  <h2 class="heading2">Version 4.74</h2>
+  <ol class="maintext">
+    <li>Added Cypress PSoC4 series</li>
+    <li>Added Energy Micro EFM32WG (Wonder Gecko) series</li>
+    <li>Added Nordic Semi nRF51922_xxAA</li>
+    <li>Added ST STM32F405OE, STM32F405OG</li>
+    <li>Added Atmel ATSAM4LC8A, ATSAM4LC8B, ATSAM4LC8C</li>
+    <li>Added Atmel ATSAMD20 series</li>
+    <li>Added startup dialog/wizard for project creation/selection.</li>
+    <li>Added Nordic Semi nRF51422_xxAA, nRF51822_xxAA, nRF51822_xxAB</li>
+    <li>Added sample projects for Atmel ATSAMD20 series</li>
+    <li>Added sample projects for Energy Micro EFM32WG (Wonder Gecko) series</li>
+    <li>Added sample projects for Cypress PSoC4 series</li>
+  </ol>
+  <h2 class="heading2">Version 4.72</h2>
+  <ol class="maintext">
+    <li>Support and sample projects for new MCUs added:<br>
+        &nbsp;&nbsp;TI CC2538NF11<br>
+        &nbsp;&nbsp;TI CC2538NF23<br>
+        &nbsp;&nbsp;TI CC2538NF53<br>
+        &nbsp;&nbsp;TI CC2538SF23<br>
+        &nbsp;&nbsp;TI CC2538SF53<br>
+        &nbsp;&nbsp;TI CM2538SF23<br>
+        &nbsp;&nbsp;TI CM2538SF53<br>
+
+    </li>
+    <li>Support and sample projects for new MCUs added:<br>
+        &nbsp;&nbsp;Atmel AT91SAM4N8A<br>
+        &nbsp;&nbsp;Atmel AT91SAM4N8B<br>
+        &nbsp;&nbsp;Atmel AT91SAM4N8C<br>
+        &nbsp;&nbsp;Atmel AT91SAM4N16B<br>
+        &nbsp;&nbsp;Atmel AT91SAM4N16C
+    </li>
+    <li>Support for new MCUs added:<br>
+        &nbsp;&nbsp;Freescale MKE02Z16xxx2<br>
+        &nbsp;&nbsp;Freescale MKE02Z32xxx2<br>
+        &nbsp;&nbsp;Freescale MKE02Z64xxx2
+    </li>
+  </ol>
+  <h2 class="heading2">Version 4.70</h2>
+  <ol class="maintext">
+    <li>Support for new MCUs added:<br>
+        &nbsp;&nbsp;Nuvoton NUC100 series devices<br>
+        &nbsp;&nbsp;Nuvoton NUC120 series devices<br>
+        &nbsp;&nbsp;Nuvoton NUC122 series devices<br>
+        &nbsp;&nbsp;Nuvoton NUC123 series devices<br>
+        &nbsp;&nbsp;Nuvoton NUC130 series devices<br>
+        &nbsp;&nbsp;Nuvoton NUC140 series devices<br>
+        &nbsp;&nbsp;Nuvoton M051 series devices<br>
+        &nbsp;&nbsp;Nuvoton M052 series devices<br>
+        &nbsp;&nbsp;Nuvoton M054 series devices<br>
+        &nbsp;&nbsp;Nuvoton M058 series devices<br>
+        &nbsp;&nbsp;Nuvoton MINI51 series devices<br>
+        &nbsp;&nbsp;Nuvoton MINI52 series devices<br>
+        &nbsp;&nbsp;Nuvoton MINI54 series devices<br>
+        &nbsp;&nbsp;Nuvoton NANO100 series devices<br>
+        &nbsp;&nbsp;Nuvoton NANO110 series devices<br>
+        &nbsp;&nbsp;Nuvoton NANO120 series devices<br>
+        &nbsp;&nbsp;Nuvoton NANO130 series devices<br>
+        &nbsp;&nbsp;Nuvoton NUC200 series devices<br>
+        &nbsp;&nbsp;Nuvoton NUC220 series devices
+    </li>
+    <li>Support for new MCUs added:<br>
+        &nbsp;&nbsp;Atmel SAM4E8E<br>
+        &nbsp;&nbsp;Atmel SAM4E16E
+    </li>
+    <li>Added sample projects for Nuvoton M052, M054, M058,<br>
+        MINI51, MINI52, MINI54, NANO100, NANO110, NANO120, NANO130,<br>
+        NUC100, NUC120, NUC122, NUC123, NUC130, NUC140, NUC200, NUC220 series devices
+    </li>
+    <li>Added sample project STM32F407IG_1x16_CFI_NOR_nCS0.jflash</li>
+    <li>Added sample project STM32F205ZG_1x16_CFI_NOR_nCS3.jflash</li>
+  </ol>
+  <h2 class="heading2">Version 4.68</h2>
+  <ol class="maintext">
+    <li>Support for new MCUs added:<br>
+        &nbsp;&nbsp;Cypress CY8C5266xxxLP<br>
+        &nbsp;&nbsp;Cypress CY8C5267xxxLP<br>
+        &nbsp;&nbsp;Cypress CY8C5268xxxLP<br>
+        &nbsp;&nbsp;Cypress CY8C5466xxxLP<br>
+        &nbsp;&nbsp;Cypress CY8C5467xxxLP<br>
+        &nbsp;&nbsp;Cypress CY8C5468xxxLP<br>
+        &nbsp;&nbsp;Cypress CY8C5666xxxLP<br>
+        &nbsp;&nbsp;Cypress CY8C5667xxxLP<br>
+        &nbsp;&nbsp;Cypress CY8C5668xxxLP<br>
+        &nbsp;&nbsp;Cypress CY8C5866xxxLP<br>
+        &nbsp;&nbsp;Cypress CY8C5867xxxLP<br>
+        &nbsp;&nbsp;Cypress CY8C5868xxxLP
+    </li>
+    <li>Added sample project CY8C5266xxxLP.jflash</li>
+    <li>Added sample project CY8C5267xxxLP.jflash</li>
+    <li>Added sample project CY8C5268xxxLP.jflash</li>
+    <li>Added sample project CY8C5466xxxLP.jflash</li>
+    <li>Added sample project CY8C5467xxxLP.jflash</li>
+    <li>Added sample project CY8C5468xxxLP.jflash</li>
+    <li>Added sample project CY8C5666xxxLP.jflash</li>
+    <li>Added sample project CY8C5667xxxLP.jflash</li>
+    <li>Added sample project CY8C5668xxxLP.jflash</li>
+    <li>Added sample project CY8C5866xxxLP.jflash</li>
+    <li>Added sample project CY8C5867xxxLP.jflash</li>
+    <li>Added sample project CY8C5868xxxLP.jflash</li>
+  </ol>
+  <h2 class="heading2">Version 4.66</h2>
+  <ol class="maintext">
+    <li>Support for new MCU added:<br>
+        &nbsp;&nbsp;Toshiba TMPM36BFYFG</li>
+    <li>Support for some new MCUs added:<br>
+        &nbsp;&nbsp;Freescale MPC5602B<br>
+        &nbsp;&nbsp;Freescale MPC5602C<br>
+        &nbsp;&nbsp;Freescale MPC5603B<br>
+        &nbsp;&nbsp;Freescale MPC5603C<br>
+        &nbsp;&nbsp;Freescale MPC5604B<br>
+        &nbsp;&nbsp;Freescale MPC5604C</li>
+    <li>nRF51xx devices: Support for user configuration area added.</li>
+  </ol>
+  <h2 class="heading2">Version 4.64</h2>
+  <ol class="maintext">
+    <li>Support for some new MCUs added:<br>
+        &nbsp;&nbsp;Analog Devices ADuCM360<br>
+        &nbsp;&nbsp;Analog Devices ADuCM361</li>
+    <li>Support for some new MCUs added:<br>
+        &nbsp;&nbsp;ST STM32F427IG<br>
+        &nbsp;&nbsp;ST STM32F427II<br>
+        &nbsp;&nbsp;ST STM32F427VG<br>
+        &nbsp;&nbsp;ST STM32F427VI<br>
+        &nbsp;&nbsp;ST STM32F427ZG<br>
+        &nbsp;&nbsp;ST STM32F427ZI<br>
+        &nbsp;&nbsp;ST STM32F437IG<br>
+        &nbsp;&nbsp;ST STM32F437II<br>
+        &nbsp;&nbsp;ST STM32F437VG<br>
+        &nbsp;&nbsp;ST STM32F437VI<br>
+        &nbsp;&nbsp;ST STM32F437ZG<br>
+        &nbsp;&nbsp;ST STM32F437ZI</li>
+    <li>Added sample project STM32F437II.jflash</li>
+  </ol>
+  <h2 class="heading2">Version 4.62</h2>
+  <ol class="maintext">
+    <li>Support for some new MCUs added:<br>
+        &nbsp;&nbsp;NXP LPC810M021<br>
+        &nbsp;&nbsp;NXP LPC811M001<br>
+        &nbsp;&nbsp;NXP LPC812M101</li>
+    <li>Added sample project LPC1812M101.jflash</li>
+    <li>Added sample project AT91SAM4SP32A.jflash</li>
+    <li>Support for some new MCUs added:<br>
+        &nbsp;&nbsp;Infineon XMC1100 series<br>
+        &nbsp;&nbsp;Infineon XMC1200 series<br>
+        &nbsp;&nbsp;Infineon XMC1201 series<br>
+        &nbsp;&nbsp;Infineon XMC1202 series<br>
+        &nbsp;&nbsp;Infineon XMC1203 series<br>
+        &nbsp;&nbsp;Infineon XMC1301 series<br>
+        &nbsp;&nbsp;Infineon XMC1302 series</li>
+    <li>Support for some new MCUs added:<br>
+        &nbsp;&nbsp;NXP LPC1812<br>
+        &nbsp;&nbsp;NXP LPC1813<br>
+        &nbsp;&nbsp;NXP LPC1815<br>
+        &nbsp;&nbsp;NXP LPC1817<br>
+        &nbsp;&nbsp;NXP LPC1822<br>
+        &nbsp;&nbsp;NXP LPC1823<br>
+        &nbsp;&nbsp;NXP LPC1825<br>
+        &nbsp;&nbsp;NXP LPC1827<br>
+        &nbsp;&nbsp;NXP LPC4312<br>
+        &nbsp;&nbsp;NXP LPC4313<br>
+        &nbsp;&nbsp;NXP LPC4315<br>
+        &nbsp;&nbsp;NXP LPC4317<br>
+        &nbsp;&nbsp;NXP LPC4322<br>
+        &nbsp;&nbsp;NXP LPC4323<br>
+        &nbsp;&nbsp;NXP LPC4325<br>
+        &nbsp;&nbsp;NXP LPC4327<br>
+        &nbsp;&nbsp;NXP LPC4333<br>
+        &nbsp;&nbsp;NXP LPC4337<br>
+        &nbsp;&nbsp;NXP LPC4353<br>
+        &nbsp;&nbsp;NXP LPC4357</li>
+    <li>Support for some new MCUs added:<br>
+        &nbsp;&nbsp;Fujitsu MB9AF111K<br>
+        &nbsp;&nbsp;Fujitsu MB9AF112K<br>
+        &nbsp;&nbsp;Fujitsu MB9AF311K<br>
+        &nbsp;&nbsp;Fujitsu MB9AF312K<br>
+        &nbsp;&nbsp;Fujitsu MB9BFD16S<br>
+        &nbsp;&nbsp;Fujitsu MB9BFD16T<br>
+        &nbsp;&nbsp;Fujitsu MB9BFD17S<br>
+        &nbsp;&nbsp;Fujitsu MB9BFD17T<br>
+        &nbsp;&nbsp;Fujitsu MB9BFD18S<br>
+        &nbsp;&nbsp;Fujitsu MB9BFD18T</li>
+    <li>Flasher ARM, RX and PPC manuals combined.</li>
+  </ol>
+  <h2 class="heading2">Version 4.60</h2>
+  <ol class="maintext">
+      <li>Support for some new MCUs added:<br>
+          &nbsp;&nbsp;Analog Devices ADuCM301 <br>
+          &nbsp;&nbsp;Toshiba TB6865FG<br>
+    <li>Added sample project TB6865FG.jflash</li>
+    <li>LPC1810, LPC1820, LPC1830, LPC1850 SPIFI flash programming support added.</li>
+  </ol>
+  <h2 class="heading2">Version 4.58</h2>
+  <ol class="maintext">
+      <li>Support for some new MCUs added:<br>
+          &nbsp;&nbsp;Fujitsu MB9AF141L/LA/M/MA/N/NA<br>
+          &nbsp;&nbsp;Fujitsu MB9AF142L/LA/M/MA/N/NA<br>
+          &nbsp;&nbsp;Fujitsu MB9AF144L/LA/M/MA/N/NA<br>
+          &nbsp;&nbsp;Fujitsu MB9AF341L/LA/M/MA/N/NA<br>
+          &nbsp;&nbsp;Fujitsu MB9AF342L/LA/M/MA/N/NA<br>
+          &nbsp;&nbsp;Fujitsu MB9AF344L/LA/M/MA/N/NA<br>
+          &nbsp;&nbsp;Fujitsu MB9AFA41LA/MA/NA<br>
+          &nbsp;&nbsp;Fujitsu MB9AFA42LA/MA/NA<br>
+          &nbsp;&nbsp;Fujitsu MB9AFA44LA/MA/NA<br>
+          &nbsp;&nbsp;Fujitsu MB9AFB41LA/MA/NA<br>
+          &nbsp;&nbsp;Fujitsu MB9AFB42LA/MA/NA<br>
+          &nbsp;&nbsp;Fujitsu MB9AFB44LA/MA/NA<br>
+          &nbsp;&nbsp;Fujitsu MB9BF121K/L/M<br>
+          &nbsp;&nbsp;Fujitsu MB9BF122K/L/M<br>
+          &nbsp;&nbsp;Fujitsu MB9BF124K/L/M<br>
+          &nbsp;&nbsp;Fujitsu MB9BF321K/L/M<br>
+          &nbsp;&nbsp;Fujitsu MB9BF322K/L/M<br>
+          &nbsp;&nbsp;Fujitsu MB9BF324K/L/M<br>
+          &nbsp;&nbsp;Fujitsu MB9DF125<br>
+          &nbsp;&nbsp;Fujitsu MB9DF126<br>
+          &nbsp;&nbsp;Fujitsu MB9EF126<br>
+          &nbsp;&nbsp;NXP LPC11E36/501<br>
+          &nbsp;&nbsp;NXP LPC11E37/501<br>
+          &nbsp;&nbsp;Renesas R5F562G7<br>
+          &nbsp;&nbsp;Renesas R5F562GA<br>
+          &nbsp;&nbsp;Renesas R5F56307/8/A/B/D/E<br>
+          &nbsp;&nbsp;Renesas R5F563T4/5/6<br>
+          &nbsp;&nbsp;Atmel ATSAM4LC1A/B/C<br>
+          &nbsp;&nbsp;Atmel ATSAM4LC2A/B/C<br>
+          &nbsp;&nbsp;Atmel ATSAM4LC4A/B/C<br>
+          &nbsp;&nbsp;Atmel ATSAM4LS1A/B/C<br>
+          &nbsp;&nbsp;Atmel ATSAM4LS2A/B/C<br>
+          &nbsp;&nbsp;Atmel ATSAM4LS4A/B/C</li>
+    <li>Added sample project MB9BF618T_1x16_CFI_NORFlash.jflash</li>
+    <li>Added sample projects for SAM4L series.</li>
+    <li>Added Sample projects for Fujitsu MB9DF / MB9EF devices</li>
+    <li>Added Sample projects for Fujitsu MB9DF / MB9EF devices</li>
+    <li>Added sample project LM4F120H5QR.jflash</li>
+    <li>Added sample project MPC5605B.jflash</li>
+    <li>Added sample project MPC5606B.jflash</li>
+    <li>Added sample project MPC5607B.jflash</li>
+    <li>Support for STM32L data flash added</li>
+    <li>J-Flash now asks if project changes shall be saved before exit</li>
+  </ol>
+  <h2 class="heading2">Version 4.56</h2>
+  <ol class="maintext">
+      <li>Support for some new MCUs added:<br>
+        &nbsp;&nbsp;NXP LPC1101LVUK<br />
+        &nbsp;&nbsp;NXP LPC1102LVUK<br />
+        &nbsp;&nbsp;NXP LPC1112LV/003<br />
+        &nbsp;&nbsp;NXP LPC1112LV/103<br />
+        &nbsp;&nbsp;NXP LPC1114LV/103<br />
+        &nbsp;&nbsp;NXP LPC1114LV/303</li>
+      <li>Support for some new MCUs added:<br>
+        &nbsp;&nbsp;Freescale MKE14D128xxx3<br />
+        &nbsp;&nbsp;Freescale MKE14D128xxx7<br />
+        &nbsp;&nbsp;Freescale MKE14D256xxx3<br />
+        &nbsp;&nbsp;Freescale MKE14D256xxx7<br />
+        &nbsp;&nbsp;Freescale MKE15D128xxx3<br />
+        &nbsp;&nbsp;Freescale MKE15D128xxx7<br />
+        &nbsp;&nbsp;Freescale MKE15D256xxx3<br />
+        &nbsp;&nbsp;Freescale MKE15D256xxx7<br />
+        &nbsp;&nbsp;Freescale MKM13Z64xxx5<br />
+        &nbsp;&nbsp;Freescale MKM14Z64xxx5<br />
+        &nbsp;&nbsp;Freescale MKM14Z128xxx5<br />
+        &nbsp;&nbsp;Freescale MKM32Z64xxx5<br />
+        &nbsp;&nbsp;Freescale MKM33Z64xxx5<br />
+        &nbsp;&nbsp;Freescale MKM33Z128xxx5<br />
+        &nbsp;&nbsp;Freescale MKM34Z128xxx5<br />
+        &nbsp;&nbsp;Freescale MKM38Z128xxx5</li>  
+      <li>Sample project ADuC7023.jflash added.</li>
+      <li>Sample project MKM34Z128xxx5.jflash added.</li>
+      <li>Sample project MKE15D256xxx7.jflash added.</li>
+      <li>Various sample projects added.</li>
+      <li>Support for some new MCUs added:<br>
+        &nbsp;&nbsp;TI RM42L432<br />
+        &nbsp;&nbsp;TI RM46L430<br />
+        &nbsp;&nbsp;TI RM46L440<br />
+        &nbsp;&nbsp;TI RM46L450<br />
+        &nbsp;&nbsp;TI RM46L630<br />
+        &nbsp;&nbsp;TI RM46L640<br />
+        &nbsp;&nbsp;TI RM46L650<br />
+        &nbsp;&nbsp;TI RM46L830<br />
+        &nbsp;&nbsp;TI RM46L840<br />
+        &nbsp;&nbsp;TI RM46L850<br />
+        &nbsp;&nbsp;TI RM46L852<br />
+        &nbsp;&nbsp;TI TMS570LS0332<br />
+        &nbsp;&nbsp;TI TMS570LS0432<br />
+        &nbsp;&nbsp;TI TMS570LS1114<br />
+        &nbsp;&nbsp;TI TMS570LS1124<br />
+        &nbsp;&nbsp;TI TMS570LS1115<br />
+        &nbsp;&nbsp;TI TMS570LS1125<br />
+        &nbsp;&nbsp;TI TMS570LS1224<br />
+        &nbsp;&nbsp;TI TMS570LS1225<br />
+        &nbsp;&nbsp;TI TMS570LS1227</li>
+      <li>Sample project ADuCM350_16MHz.jflash added</li>
+      <li>Support for some new MCUs added:<br>
+        &nbsp;&nbsp;Analog Devices ADuCM330<br />
+        &nbsp;&nbsp;Analog Devices ADuCM331<br />
+        &nbsp;&nbsp;Analog Devices ADuCM350</li>
+      <li>Sample project MB9AF154M.jflash added</li>
+      <li>Sample project MB9AF154N.jflash added</li>
+      <li>Sample project MB9AF154R.jflash added</li>
+      <li>Sample project MB9AF155M.jflash added</li>
+      <li>Sample project MB9AF155N.jflash added</li>
+      <li>Sample project MB9AF155R.jflash added</li>
+      <li>Sample project MB9AF156M.jflash added</li>
+      <li>Sample project MB9AF156N.jflash added</li>
+      <li>Sample project MB9AF156R.jflash added</li>
+      <li>Sample project MB9BF521K.jflash added</li>
+      <li>Sample project MB9BF521L.jflash added</li>
+      <li>Sample project MB9BF521M.jflash added</li>
+      <li>Sample project MB9BF522K.jflash added</li>
+      <li>Sample project MB9BF522L.jflash added</li>
+      <li>Sample project MB9BF522M.jflash added</li>
+      <li>Sample project MB9BF524K.jflash added</li>
+      <li>Sample project MB9BF524L.jflash added</li>
+      <li>Sample project MB9BF524M.jflash added</li>
+      <li>Sample project nRF51422.jflash added</li>
+      <li>Sample project nRF51822.jflash added</li>
+      <li>Sample project MK40DX256xxx10_ConfigureDataFlash.jflash added</li>
+      <li>Sample project HT32F1251.jflash added</li>
+      <li>Sample project HT32F1251_ProgOptionBytes.jflash added</li>
+      <li>Sample project HT32F1252.jflash added</li>
+      <li>Sample project HT32F1252_ProgOptionBytes.jflash added</li>
+      <li>Sample project HT32F1253.jflash added</li>
+      <li>Sample project HT32F1253_ProgOptionBytes.jflash added</li>
+      <li>Sample project HT32F1755.jflash added</li>
+      <li>Sample project HT32F1755_ProgOptionBytes.jflash added</li>
+      <li>Sample project HT32F1765.jflash added</li>
+      <li>Sample project HT32F1765_ProgOptionBytes.jflash added</li>
+      <li>Sample project HT32F2755.jflash added</li>
+      <li>Sample project HT32F2755_ProgOptionBytes.jflash added</li>
+      <li>Support for some new MCUs added:<br>
+        &nbsp;&nbsp;Nordic Semi nRF51422<br />
+        &nbsp;&nbsp;Nordic Semi nRF51822</li>
+      <li>Support for some new MCUs added:<br>
+        &nbsp;&nbsp;Fujitsu MB9AF154M<br />
+        &nbsp;&nbsp;Fujitsu MB9AF154N<br />
+        &nbsp;&nbsp;Fujitsu MB9AF154R<br />
+        &nbsp;&nbsp;Fujitsu MB9AF155M<br />
+        &nbsp;&nbsp;Fujitsu MB9AF155N<br />
+        &nbsp;&nbsp;Fujitsu MB9AF155R<br />
+        &nbsp;&nbsp;Fujitsu MB9AF156M<br />
+        &nbsp;&nbsp;Fujitsu MB9AF156N<br />
+        &nbsp;&nbsp;Fujitsu MB9AF156R<br />
+        &nbsp;&nbsp;Fujitsu MB9BF521K<br />
+        &nbsp;&nbsp;Fujitsu MB9BF521L<br />
+        &nbsp;&nbsp;Fujitsu MB9BF521M<br />
+        &nbsp;&nbsp;Fujitsu MB9BF522K<br />
+        &nbsp;&nbsp;Fujitsu MB9BF522L<br />
+        &nbsp;&nbsp;Fujitsu MB9BF522M<br />
+        &nbsp;&nbsp;Fujitsu MB9BF524K<br />
+        &nbsp;&nbsp;Fujitsu MB9BF524L<br />
+        &nbsp;&nbsp;Fujitsu MB9BF524M</li>
+      <li>Support for some new MCUs added:<br>
+        &nbsp;&nbsp;Holtek HT32F1251<br />
+        &nbsp;&nbsp;Holtek HT32F1252<br />
+        &nbsp;&nbsp;Holtek HT32F1253<br />
+        &nbsp;&nbsp;Holtek HT32F1755<br />
+        &nbsp;&nbsp;Holtek HT32F1765<br />
+        &nbsp;&nbsp;Holtek HT32F2755</li>
+      <li>Added data flash support for Freescale Kinetis devices.</li>
+  </ol>
+  <h2 class="heading2">Version 4.54</h2>
+  <ol class="maintext">
+      <li>Sample project AT91SAM4SA16B.jflash added</li>
+      <li>Sample project AT91SAM4SA16C.jflash added</li>
+      <li>Sample project AT91SAM4SD16B.jflash added</li>
+      <li>Sample project AT91SAM4SD16C.jflash added</li>
+      <li>Sample project AT91SAM4SD32B.jflash added</li>
+      <li>Sample project AT91SAM4SD32C.jflash added</li>
+      <li>Sample project TMPM061FWFG.jflash added</li>
+      <li>Sample project AT91SAM3N00A.jflash added</li>
+      <li>Sample project AT91SAM3N0C.jflash added</li>
+      <li>Sample project MB9AFB41L.jflash added</li>
+      <li>Sample project MB9AFB41M.jflash added</li>
+      <li>Sample project MB9AFB41N.jflash added</li>
+      <li>Sample project MB9AFB42L.jflash added</li>
+      <li>Sample project MB9AFB42M.jflash added</li>
+      <li>Sample project MB9AFB42N.jflash added</li>
+      <li>Sample project MB9AFB44L.jflash added</li>
+      <li>Sample project MB9AFB44M.jflash added</li>
+      <li>Sample project MB9AFB44N.jflash added</li>
+      <li>Added work flash programming support for some devices:<br />
+        &nbsp;&nbsp;Fujitsu MB9BF112N<br />
+        &nbsp;&nbsp;Fujitsu MB9BF112R<br />
+        &nbsp;&nbsp;Fujitsu MB9BF114N<br />
+        &nbsp;&nbsp;Fujitsu MB9BF114R<br />
+        &nbsp;&nbsp;Fujitsu MB9BF115N<br />
+        &nbsp;&nbsp;Fujitsu MB9BF115R<br />
+        &nbsp;&nbsp;Fujitsu MB9BF116N<br />
+        &nbsp;&nbsp;Fujitsu MB9BF116R<br />
+        &nbsp;&nbsp;Fujitsu MB9BF412N<br />
+        &nbsp;&nbsp;Fujitsu MB9BF412R<br />
+        &nbsp;&nbsp;Fujitsu MB9BF414N<br />
+        &nbsp;&nbsp;Fujitsu MB9BF414R<br />
+        &nbsp;&nbsp;Fujitsu MB9BF415N<br />
+        &nbsp;&nbsp;Fujitsu MB9BF415R<br />
+        &nbsp;&nbsp;Fujitsu MB9BF416N<br />
+        &nbsp;&nbsp;Fujitsu MB9BF416R<br />
+        &nbsp;&nbsp;Fujitsu MB9BF512N<br />
+        &nbsp;&nbsp;Fujitsu MB9BF512R<br />
+        &nbsp;&nbsp;Fujitsu MB9BF514N<br />
+        &nbsp;&nbsp;Fujitsu MB9BF514R<br />
+        &nbsp;&nbsp;Fujitsu MB9BF515N<br />
+        &nbsp;&nbsp;Fujitsu MB9BF515R<br />
+        &nbsp;&nbsp;Fujitsu MB9BF516N<br />
+        &nbsp;&nbsp;Fujitsu MB9BF516R</li>
+      <li>Support and J-Flash project for some new MCUs added:<br />
+        &nbsp;&nbsp;Luminary LM3S1110, LM3S1133, LM3S1138, LM3S1150, LM3S1162, LM3S1165,<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LM3S1166, LM3S1332, LM3S1435, LM3S1439, LM3S1512, LM3S1538,<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LM3S1601, LM3S1607, LM3S1608, LM3S1620, LM3S1625, LM3S1626,<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LM3S1627, LM3S1635, LM3S1636, LM3S1637, LM3S1651, LM3S1776,<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LM3S1811, LM3S1816, LM3S1850, LM3S1B21, LM3S1C21, LM3S1C26,<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LM3S1C58, LM3S1D26, LM3S1F11, LM3S1G21, LM3S1G58, LM3S1H16,<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LM3S1J11, LM3S1J16, LM3S1N16, LM3S1P51, LM3S1R21, LM3S1R26,<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LM3S1W16, LM3S1Z16, LM3S2016<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LM3S2276, LM3S2608, LM3S2671, LM3S2776, LM3S2793, LM3S2911,<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LM3S2918, LM3S2919, LM3S2U93,<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LM3S3634, LM3S3651, LM3S3654,<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LM3S5651, LM3S5652, LM3S5656, LM3S5662, LM3S5737, LM3S5739<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LM3S5747, LM3S5749, LM3S5752, LM3S5762, LM3S5791, LM3S5956,<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LM3S5C31, LM3S5C36, LM3S5C51, LM3S5C56, LM3S5K31, LM3S5P3B<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LM3S5P51, LM3S5P56, LM3S5R31, LM3S5U91<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LM3S6537, LM3S6611, LM3S6618, LM3S6753, LM3S6916, LM3S6950,<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LM3S6C11, LM3S6C65, LM3S6G11,<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LM3S8970, LM3S8C62, LM3S8G62<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LM3S9781, LM3S9971, LM3S9B81, LM3S9BN2, LM3S9BN5, LM3S9BN6,<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LM3S9CN5, LM3S9D81, LM3S9D90, LM3S9DN5, LM3S9DN6, LM3S9G97<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LM3S9GN5, LM3S9L71, LM3S9U90, LM3S9U92, LM3S9U95, LM3S9U96</li>
+      <li>Added NXP LPC1759</li>
+      <li>Support for some new MCUs added:<br />
+        &nbsp;&nbsp; Fujitsu MB9AFB41L<br />
+        &nbsp;&nbsp; Fujitsu MB9AFB41M<br />
+        &nbsp;&nbsp; Fujitsu MB9AFB41N<br />
+        &nbsp;&nbsp; Fujitsu MB9AFB42L<br />
+        &nbsp;&nbsp; Fujitsu MB9AFB42M<br />
+        &nbsp;&nbsp; Fujitsu MB9AFB42N<br />
+        &nbsp;&nbsp; Fujitsu MB9AFB44L<br />
+        &nbsp;&nbsp; Fujitsu MB9AFB44M<br />
+        &nbsp;&nbsp; Fujitsu MB9AFB44N</li>
+      <li>Work flash support for the following Cortex-M3 based devices added:<br />
+        &nbsp;&nbsp; Fujitsu MB9AFB41L<br />
+        &nbsp;&nbsp; Fujitsu MB9AFB41M<br />
+        &nbsp;&nbsp; Fujitsu MB9AFB41N<br />
+        &nbsp;&nbsp; Fujitsu MB9AFB42L<br />
+        &nbsp;&nbsp; Fujitsu MB9AFB42M<br />
+        &nbsp;&nbsp; Fujitsu MB9AFB42N<br />
+        &nbsp;&nbsp; Fujitsu MB9AFB44L<br />
+        &nbsp;&nbsp; Fujitsu MB9AFB44M<br />
+        &nbsp;&nbsp; Fujitsu MB9AFB44N</li>
+      <li>Support for some new MCUs added:<br>
+        &nbsp;&nbsp;Atmel AT91SAM4SA16B<br />
+        &nbsp;&nbsp;Atmel AT91SAM4SA16C<br />
+        &nbsp;&nbsp;Atmel AT91SAM4SD16B<br />
+        &nbsp;&nbsp;Atmel AT91SAM4SD16C<br />
+        &nbsp;&nbsp;Atmel AT91SAM4SD32B<br />
+        &nbsp;&nbsp;Atmel AT91SAM4SD32C</li>
+      <li>Support for some new MCUs added:<br>
+        &nbsp;&nbsp;Atmel AT91SAM3N00A<br />
+        &nbsp;&nbsp;Atmel AT91SAM3N00B<br />
+        &nbsp;&nbsp;Atmel AT91SAM3N0A<br />
+        &nbsp;&nbsp;Atmel AT91SAM3N0B<br />
+        &nbsp;&nbsp;Atmel AT91SAM3N0C</li>
+      <li>Added Toshiba TMPM061FWFG</li>
+      <li>Support for some new MCUs added:<br>
+        &nbsp;&nbsp;Energy Micro EFM32TG225F8<br />
+        &nbsp;&nbsp;Energy Micro EFM32TG225F16<br />
+        &nbsp;&nbsp;Energy Micro EFM32TG225F32<br />
+        &nbsp;&nbsp;Energy Micro EFM32TG825F8<br />
+        &nbsp;&nbsp;Energy Micro EFM32TG825F16<br />
+        &nbsp;&nbsp;Energy Micro EFM32TG825F32</li>
+  </ol>
+  <h2 class="heading2">Version 4.52</h2>
+  <ol class="maintext">
+      <li>Sample project LPC1788_EmbeddedArtistsDevKit_CFI_1x16.jflash added.</li>
+      <li>Sample project STM32F217ZG.jflash added</li>
+      <li>Sample project STM32F407IG.jflash added</li>
+      <li>Sample project STM32L152VB.jflash added</li>
+      <li>Sample project STM32L152VB_ProgUserOptionByte.jflash added</li>
+      <li>Sample project LPC1857.jflash added.</li>
+      <li>Sample project STM32F303VC.jflash added.</li>
+      <li>Sample project MK20DX128xxx5.jflash added.</li>
+      <li>Sample project MK21DN512xxx5.jflash added.</li>
+      <li>Sample project LPC4088.jflash added.</li>
+      <li>Serial number programming feature extended. See manual for extension.</li>
+      <li>Added Eon EN29LV800CB, EN29LV800CT</li>
+      <li>Added support for serial number programming.</li>
+      <li>Sample project MKL25Z128xxx4.jflash added</li>
+      <li>Support for new MCU added:<br>
+        &nbsp;&nbsp;Luminary LM3S5P31</li>
+      <li>Support for some new MCUs added:<br>
+        &nbsp;&nbsp;NXP LPC4072<br />
+        &nbsp;&nbsp;NXP LPC4074<br />
+        &nbsp;&nbsp;NXP LPC4078<br />
+        &nbsp;&nbsp;NXP LPC4088</li>
+      <li>Support for some new MCUs added:<br>
+        &nbsp;&nbsp;NXP LPC11A02UK<br />
+        &nbsp;&nbsp;NXP LPC11A04UK<br />
+        &nbsp;&nbsp;NXP LPC11A11/001</li>  
+      <li>Support for some new MCUs added:<br>
+        &nbsp;&nbsp;Freescale MKL04Zxxxxx4 series<br />
+        &nbsp;&nbsp;Freescale MKL05Zxxxxx4 series<br />
+        &nbsp;&nbsp;Freescale MKL14Zxxxxx4 series<br />
+        &nbsp;&nbsp;Freescale MKL15Zxxxxx4 series<br />
+        &nbsp;&nbsp;Freescale MKL24Zxxxxx4 series<br />
+        &nbsp;&nbsp;Freescale MKL25Zxxxxx4 series</li>
+      <li>Support for some new MCUs added<br />
+        &nbsp;&nbsp;Freescale MK11DXxxxxxx5 series<br />
+        &nbsp;&nbsp;Freescale MK11DNxxxxxx5 series<br />
+        &nbsp;&nbsp;Freescale MK12DXxxxxxx5 series<br />
+        &nbsp;&nbsp;Freescale MK12DNxxxxxx5 series<br />
+        &nbsp;&nbsp;Freescale MK21DXxxxxxx5 series<br />
+        &nbsp;&nbsp;Freescale MK21DNxxxxxx5 series<br />
+        &nbsp;&nbsp;Freescale MK22DXxxxxxx5 series<br />
+        &nbsp;&nbsp;Freescale MK22DNxxxxxx5 series</li>
+      <li>Support for some new MCUs added<br />
+        &nbsp;&nbsp;ST STM32F302 series<br />
+        &nbsp;&nbsp;ST STM32F303 series<br />
+        &nbsp;&nbsp;ST STM32F372 series<br />
+        &nbsp;&nbsp;ST STM32F373 series<br />
+      <li>Support for some new MCUs added:<br>
+        &nbsp;&nbsp;NXP LPC1833<br />
+        &nbsp;&nbsp;NXP LPC1837<br />
+        &nbsp;&nbsp;NXP LPC1853<br />
+        &nbsp;&nbsp;NXP LPC1857</li>
+  </ol>
+  <h2 class="heading2">Version 4.50</h2>
+  <ol class="maintext">
+      <li>Support for AM335 added.</li>
+      <li>Support for some new MCUs added:<br>
+        &nbsp;&nbsp;ST STM32F050C4<br>
+        &nbsp;&nbsp;ST STM32F050C6<br>
+        &nbsp;&nbsp;ST STM32F050K4<br>
+        &nbsp;&nbsp;ST STM32F050K6<br>
+        &nbsp;&nbsp;ST STM32F051C4<br>
+        &nbsp;&nbsp;ST STM32F051K4<br>
+        &nbsp;&nbsp;ST STM32F051R4</li>
+      <li>Support for some new MCUs added:<br>
+        &nbsp;&nbsp;NXP LPC11U34/311<br>
+        &nbsp;&nbsp;NXP LPC11U34/421<br>
+        &nbsp;&nbsp;NXP LPC11U35/401<br>
+        &nbsp;&nbsp;NXP LPC11U35/501<br>
+        &nbsp;&nbsp;NXP LPC11U36/401<br>
+        &nbsp;&nbsp;NXP LPC11U37/401<br>
+        &nbsp;&nbsp;NXP LPC11U37/501</li>
+      <li>Support for some new MCUs added:<br>
+        &nbsp;&nbsp;Toshiba TMPM342FXBG<br>
+        &nbsp;&nbsp;Toshiba TMPM365FYXBG</li>
+    </ol>
+  <h2 class="heading2">Version 4.46</h2>
+  <ol class="maintext">
+      <li>Sample project LM4F232H5.jflash added.</li>
+      <li>Support for some new MCUs added:<br>
+        &nbsp;&nbsp;ST STM32F051C4<br>
+        &nbsp;&nbsp;ST STM32F051K4<br>
+        &nbsp;&nbsp;ST STM32F051R4<br>
+      </li>
+      <li>Support for some new MCUs added:<br>
+        &nbsp;&nbsp;Fujitsu MB9BF116T<br>
+        &nbsp;&nbsp;Fujitsu MB9BF117S<br>
+        &nbsp;&nbsp;Fujitsu MB9BF117T<br>
+        &nbsp;&nbsp;Fujitsu MB9BF118S<br>
+        &nbsp;&nbsp;Fujitsu MB9BF118T<br>
+        &nbsp;&nbsp;Fujitsu MB9BF216S<br>
+        &nbsp;&nbsp;Fujitsu MB9BF216T<br>
+        &nbsp;&nbsp;Fujitsu MB9BF217S<br>
+        &nbsp;&nbsp;Fujitsu MB9BF217T<br>
+        &nbsp;&nbsp;Fujitsu MB9BF218S<br>
+        &nbsp;&nbsp;Fujitsu MB9BF218T<br>
+        &nbsp;&nbsp;Fujitsu MB9BF316S<br>
+        &nbsp;&nbsp;Fujitsu MB9BF316T<br>
+        &nbsp;&nbsp;Fujitsu MB9BF317S<br>
+        &nbsp;&nbsp;Fujitsu MB9BF317T<br>
+        &nbsp;&nbsp;Fujitsu MB9BF318S<br>
+        &nbsp;&nbsp;Fujitsu MB9BF318T<br>
+        &nbsp;&nbsp;Fujitsu MB9BF412N<br>
+        &nbsp;&nbsp;Fujitsu MB9BF412R<br>
+        &nbsp;&nbsp;Fujitsu MB9BF414N<br>
+        &nbsp;&nbsp;Fujitsu MB9BF414R<br>
+        &nbsp;&nbsp;Fujitsu MB9BF415N<br>
+        &nbsp;&nbsp;Fujitsu MB9BF415R<br>
+        &nbsp;&nbsp;Fujitsu MB9BF416N<br>
+        &nbsp;&nbsp;Fujitsu MB9BF416R<br>
+        &nbsp;&nbsp;Fujitsu MB9BF416S<br>
+        &nbsp;&nbsp;Fujitsu MB9BF416T<br>
+        &nbsp;&nbsp;Fujitsu MB9BF417S<br>
+        &nbsp;&nbsp;Fujitsu MB9BF417T<br>
+        &nbsp;&nbsp;Fujitsu MB9BF418S<br>
+        &nbsp;&nbsp;Fujitsu MB9BF418T<br>
+        &nbsp;&nbsp;Fujitsu MB9BF512N<br>
+        &nbsp;&nbsp;Fujitsu MB9BF512R<br>
+        &nbsp;&nbsp;Fujitsu MB9BF514N<br>
+        &nbsp;&nbsp;Fujitsu MB9BF514R<br>
+        &nbsp;&nbsp;Fujitsu MB9BF515N<br>
+        &nbsp;&nbsp;Fujitsu MB9BF515R<br>
+        &nbsp;&nbsp;Fujitsu MB9BF516N<br>
+        &nbsp;&nbsp;Fujitsu MB9BF516R<br>
+        &nbsp;&nbsp;Fujitsu MB9BF516S<br>
+        &nbsp;&nbsp;Fujitsu MB9BF516T<br>
+        &nbsp;&nbsp;Fujitsu MB9BF517S<br>
+        &nbsp;&nbsp;Fujitsu MB9BF517T<br>
+        &nbsp;&nbsp;Fujitsu MB9BF518S<br>
+        &nbsp;&nbsp;Fujitsu MB9BF518T<br>
+      </li>
+      <li>Support for some new MCUs added:<br>
+        &nbsp;&nbsp;Luminary LM3S300<br>
+        &nbsp;&nbsp;Luminary LM3S600<br>
+        &nbsp;&nbsp;Luminary LM3S608<br>
+        &nbsp;&nbsp;Luminary LM3S808<br>
+        &nbsp;&nbsp;Luminary LM3S1F16<br>
+        &nbsp;&nbsp;Luminary LM3S1H11<br>
+        &nbsp;&nbsp;Luminary LM3S2616<br>
+        &nbsp;&nbsp;Luminary LM3S5K36<br>
+        &nbsp;&nbsp;Luminary LM3S5P36<br>
+        &nbsp;&nbsp;Luminary LM3S5T36<br>
+        &nbsp;&nbsp;Luminary LM3S5Y36<br>
+        &nbsp;&nbsp;Luminary LM3S6G65<br>
+        &nbsp;&nbsp;Luminary LM3S9D95<br>
+        &nbsp;&nbsp;Luminary LM3S9D96<br>
+        &nbsp;&nbsp;Luminary LM3S9C97<br>
+        &nbsp;&nbsp;Luminary LM3S9U81<br>
+      </li>
+      <li>Support for some new MCUs added:<br>
+        &nbsp;&nbsp;NXP LPC1102<br>
+        &nbsp;&nbsp;NXP LPC1315<br>
+        &nbsp;&nbsp;NXP LPC1316<br>
+        &nbsp;&nbsp;NXP LPC1317<br>
+        &nbsp;&nbsp;NXP LPC1345<br>
+        &nbsp;&nbsp;NXP LPC1346<br>
+        &nbsp;&nbsp;NXP LPC1347<br>
+        &nbsp;&nbsp;NXP LPC1763<br>
+        &nbsp;&nbsp;NXP LPC1769<br>
+        &nbsp;&nbsp;NXP LPC2921<br>
+        &nbsp;&nbsp;NXP LPC2923<br>
+        &nbsp;&nbsp;NXP LPC2925<br>
+        &nbsp;&nbsp;NXP LPC2926<br>
+        &nbsp;&nbsp;NXP LPC2939<br>
+      </li>
+      <li>Support for some new MCUs added:<br>
+        &nbsp;&nbsp;ST STM32L162QD<br>
+        &nbsp;&nbsp;ST STM32L162RD<br>
+        &nbsp;&nbsp;ST STM32L162VD<br>
+        &nbsp;&nbsp;ST STM32L162ZD<br>
+        &nbsp;&nbsp;ST STM32W108C8<br>
+      </li>
+      <li>Support for some new MCUs added:<br>
+        &nbsp;&nbsp;TI LM4F110B2QR<br>
+        &nbsp;&nbsp;TI LM4F110C4QR<br>
+        &nbsp;&nbsp;TI LM4F110E5QR<br>
+        &nbsp;&nbsp;TI LM4F110H5QR<br>
+        &nbsp;&nbsp;TI LM4F111B2QR<br>
+        &nbsp;&nbsp;TI LM4F111C4QR<br>
+        &nbsp;&nbsp;TI LM4F111E5QR<br>
+        &nbsp;&nbsp;TI LM4F111H5QR<br>
+        &nbsp;&nbsp;TI LM4F112C4QC<br>
+        &nbsp;&nbsp;TI LM4F112E5QC<br>
+        &nbsp;&nbsp;TI LM4F112H5QC<br>
+        &nbsp;&nbsp;TI LM4F112H5QD<br>
+        &nbsp;&nbsp;TI LM4F120B2QR<br>
+        &nbsp;&nbsp;TI LM4F120C4QR<br>
+        &nbsp;&nbsp;TI LM4F120E5QR<br>
+        &nbsp;&nbsp;TI LM4F120H5QR<br>
+        &nbsp;&nbsp;TI LM4F121B2QR<br>
+        &nbsp;&nbsp;TI LM4F121C4QR<br>
+        &nbsp;&nbsp;TI LM4F121E5QR<br>
+        &nbsp;&nbsp;TI LM4F121H5QR<br>
+        &nbsp;&nbsp;TI LM4F122C4QC<br>
+        &nbsp;&nbsp;TI LM4F122E5QC<br>
+        &nbsp;&nbsp;TI LM4F122H5QC<br>
+        &nbsp;&nbsp;TI LM4F122H5QD<br>
+        &nbsp;&nbsp;TI LM4F130C4QR<br>
+        &nbsp;&nbsp;TI LM4F130E5QR<br>
+        &nbsp;&nbsp;TI LM4F130H5QR<br>
+        &nbsp;&nbsp;TI LM4F131C4QR<br>
+        &nbsp;&nbsp;TI LM4F131E5QR<br>
+        &nbsp;&nbsp;TI LM4F131H5QR<br>
+        &nbsp;&nbsp;TI LM4F132C4QC<br>
+        &nbsp;&nbsp;TI LM4F132E5QC<br>
+        &nbsp;&nbsp;TI LM4F132H5QC<br>
+        &nbsp;&nbsp;TI LM4F132H5QD<br>
+        &nbsp;&nbsp;TI LM4F210E5QR<br>
+        &nbsp;&nbsp;TI LM4F210H5QR<br>
+        &nbsp;&nbsp;TI LM4F211E5QR<br>
+        &nbsp;&nbsp;TI LM4F211H5QR<br>
+        &nbsp;&nbsp;TI LM4F212E5QC<br>
+        &nbsp;&nbsp;TI LM4F212H5BB<br>
+        &nbsp;&nbsp;TI LM4F212H5QC<br>
+        &nbsp;&nbsp;TI LM4F212H5QD<br>
+        &nbsp;&nbsp;TI LM4F230E5QR<br>
+        &nbsp;&nbsp;TI LM4F230H5QR<br>
+        &nbsp;&nbsp;TI LM4F231E5QR<br>
+        &nbsp;&nbsp;TI LM4F231H5QR<br>
+        &nbsp;&nbsp;TI LM4F232E5QC<br>
+        &nbsp;&nbsp;TI LM4F232H5BB<br>
+        &nbsp;&nbsp;TI LM4F232H5QC<br>
+        &nbsp;&nbsp;TI LM4F232H5QD<br>
+      </li>
+      <li>Support for some new MCUs added:<br>
+        &nbsp;&nbsp;Toshiba TMPM367FDFG<br>
+        &nbsp;&nbsp;Toshiba TMPM367FDXBG<br>
+        &nbsp;&nbsp;Toshiba TMPM368FDFG<br>
+        &nbsp;&nbsp;Toshiba TMPM368FDXBG<br>
+        &nbsp;&nbsp;Toshiba TMPM369FDXBG<br>
+        &nbsp;&nbsp;Toshiba TMPM376FDDFG<br>
+        &nbsp;&nbsp;Toshiba TMPM376FDFG<br>
+        &nbsp;&nbsp;Toshiba TMPM377FDDFG<br>
+        &nbsp;&nbsp;Toshiba TMPM377FDFG<br>
+        &nbsp;&nbsp;Toshiba TMPM377FYDFG<br>
+        &nbsp;&nbsp;Toshiba TMPM377FYFG<br>
+        &nbsp;&nbsp;Toshiba TMPM380FDFG<br>
+        &nbsp;&nbsp;Toshiba TMPM384FDFG<br>
+      </li>
+    </ol>
+  <h2 class="heading2">Version 4.44d</h2>
+    <ol class="maintext">
+      <li>Support for some new MCUs added:<br>
+        &nbsp;&nbsp;Fujitsu MB9AF131K<br>
+        &nbsp;&nbsp;Fujitsu MB9AF131L<br>
+        &nbsp;&nbsp;Fujitsu MB9AF132K<br>
+        &nbsp;&nbsp;Fujitsu MB9AF131L
+      </li>
+      <li>Added sample project ADuC7124.jflash</li>
+      </ol>
+  <h2 class="heading2">Version 4.42</h2>
+    <ol class="maintext">
+      <li>Support for some new MCUs added:<br>
+        &nbsp;&nbsp;Analog Devices ADuC7121<br>
+        &nbsp;&nbsp;Analog Devices ADuC7122<br>
+        &nbsp;&nbsp;Analog Devices ADuC7124<br>
+        &nbsp;&nbsp;Analog Devices ADuC7126
+      </li>
+      <li>Added sample project ADuC7124.jflash</li>
+      </ol>
+  <h2 class="heading2">Version 4.40c</h2>
+    <ol class="maintext">
+      <li>Support for some new MCUs added:<br>
+        &nbsp;&nbsp;Infineon XMC4500
+      </li>
+      <li>Sample project XMC4500.jflash added.</li>
+      </ol>
+  <h2 class="heading2">Version 4.36i</h2>
+    <ol class="maintext">
+      <li>Support for some new MCUs added:<br>
+        &nbsp;&nbsp;Samsung S3FN41F
+      </li>
+      <li>Sample project S3FN41F.jflash added.</li>
+      <li>Chip erase for Samsung S3FN21x and S3FN41F devices added.</li>
+      </ol>
+  <h2 class="heading2">Version 4.36</h2>
+    <ol class="maintext">
+      <li>Support for some new MCUs added:<br>
+        &nbsp;&nbsp;ST STM32F405RG, STM32F405VG, STM32F405ZG<br>
+        &nbsp;&nbsp;ST STM32F407IE, STM32F407IG, STM32F407VE, STM32F407VG, STM32F407ZE, STM32F407ZG<br>
+        &nbsp;&nbsp;ST STM32F415RG, STM32F415VG, STM32F415ZG<br>
+        &nbsp;&nbsp;ST STM32F417IE, STM32F417IG, STM32F417VE, STM32F417VG, STM32F417ZE, STM32F417ZG<br>
+      </li>
+    </ol>
+  <h2 class="heading2">Version 4.34c</h2>
+    <ol class="maintext">
+      <li>Support for some new MCUs added:<br>
+        &nbsp;&nbsp;Fujitsu MB9BF111L, MB9BF111M, MB9BF111N<br>
+        &nbsp;&nbsp;Fujitsu MB9BF112L, MB9BF112M, MB9BF112N<br>
+        &nbsp;&nbsp;Fujitsu MB9BF114L, MB9BF114M, MB9BF114N<br>
+        &nbsp;&nbsp;Fujitsu MB9BF115M, MB9BF115N<br>
+        &nbsp;&nbsp;Fujitsu MB9BF116M, MB9BF116N<br>
+        &nbsp;&nbsp;Fujitsu MB9BF311L, MB9BF311M, MB9BF311N<br>
+        &nbsp;&nbsp;Fujitsu MB9BF312L, MB9BF312M, MB9BF312N<br>
+        &nbsp;&nbsp;Fujitsu MB9BF314L, MB9BF314M, MB9BF314N<br>
+        &nbsp;&nbsp;Fujitsu MB9BF315M, MB9BF315N<br>
+        &nbsp;&nbsp;Fujitsu MB9BF316M, MB9BF316N
+      </li>
+    </ol>
+  <h2 class="heading2">Version 4.34</h2>
+    <ol class="maintext">
+      <li>Support for some new MCUs added:<br>
+        &nbsp;&nbsp;NXP LPC12D27<br>
+        &nbsp;&nbsp;Luminary LM3S2B93
+      </li>
+      <li>Sample project MB86R03.jflash added.</li>
+    </ol>
+  <h2 class="heading2">Version 4.32</h2>
+    <ol class="maintext">
+      <li>Flash programming support for Cortex-R4.<br>
+      </li>
+      <li>Support for some new MCUs:<br>
+          Freescale MK10DN512ZVxx10<br>
+          Freescale MK10DX128ZVxx10<br>
+          Freescale MK10DX256ZVxx10<br>
+          Freescale MK20DN512ZVxx10<br>
+          Freescale MK20DX128ZVxx10<br>
+          Freescale MK20DX256ZVxx10<br>
+          Freescale MK30DN512ZVxx10<br>
+          Freescale MK30DX128ZVxx10<br>
+          Freescale MK30DX256ZVxx10<br>
+          Luminary LM3S2601<br>
+          Luminary LM3S800<br>
+          ST STM32F103C4<br>
+          ST STM32F103R4<br>
+          ST STM32F103T4<br>
+          TI TMS570LS10106<br>
+          TI TMS570LS10116<br>
+          TI TMS570LS10206<br>
+          TI TMS570LS10216<br>
+          TI TMS570LS20206<br>
+          TI TMS570LS20216<br>
+          TI TMS570LS2124<br>
+          TI TMS570LS2125<br>
+          TI TMS570LS2126<br>
+          TI TMS570LS2127<br>
+          TI TMS570LS2134<br>
+          TI TMS570LS2135<br>
+          TI TMS570LS2136<br>
+          TI TMS570LS2137<br>
+          TI TMS570LS3134<br>
+          TI TMS570LS3135<br>
+          TI TMS570LS3136<br>
+          TI TMS570LS3137<br>
+       </li>
+    </ol>
+  <h2 class="heading2">Version 4.20</h2>
+    <ol class="maintext">
+      <li>Support for some new flash devices:<br>
+          Macronix MX29GL128EL<br>
+          Macronix MX29GL128EH<br>
+          Macronix MX29GL256EL<br>
+          Macronix MX29GL256EH<br>
+          Samsung K8P6415UQB<br>
+          Numonyx M29W128GL<br>
+          Numonyx M29W128GH<br>
+      </li>
+      <li>Support for some new MCUs:<br>
+          ST STM32L151C8<br>
+          ST STM32L151R8<br>
+          ST STM32L151V8<br>
+          ST STM32L151CB<br>
+          ST STM32L151RB<br>
+          ST STM32L151VB<br>
+          ST STM32L152C8<br>
+          ST STM32L152R8<br>
+          ST STM32L152V8<br>
+          ST STM32L152CB<br>
+          ST STM32L152RB<br>
+          ST STM32L152VB<br>
+      </li>
+    </ol>
+  <h2 class="heading2">Version 4.12</h2>
+    <ol class="maintext">
+      <li>Multibank support for Flasher ARM added.<br>
+      </li>
+    </ol>
+  <h2 class="heading2">Version 4.08a</h2>
+    <ol class="maintext">
+      <li>Support for some new MCUs:<br>
+          NXP LPC1311<br>
+          NXP LPC1313<br>
+      </li>
+    </ol>
+  <h2 class="heading2">Version 4.06</h2>
+    <ol class="maintext">
+      <li>Support for some new flash devices:<br>
+          Eon EN29PL032<br>
+          Eon EN29PL064<br>
+          Eon EN29LV160B<br>
+          Eon EN29LV800B<br>
+          Eon EN71PL032<br>
+      </li>
+      <li>Support for some new MCUs:<br>
+          Atmel AT91SAM3U<br>
+          NXP LPC1111<br>
+          NXP LPC1113<br>
+          NXP LPC1751<br>
+          NXP LPC1752<br>
+          NXP LPC1754<br>
+          NXP LPC1756<br>
+          NXP LPC1758<br>
+          NXP LPC1764<br>
+          NXP LPC1765<br>
+          NXP LPC1766<br>
+          NXP LPC1768<br>
+          NXP LPC2917<br>
+          NXP LPC2919<br>
+          NXP LPC2927<br>
+          NXP LPC2929<br>
+      </li>
+    </ol>
+  <h2 class="heading2">Version 4.04</h2>
+    <ol class="maintext">
+      <li>Support for some new flash devices:<br>
+          Macronix MX29LV128D<br>
+          Spansion S29JL064H<br>
+          Spansion S29WS128P<br>
+          Spansion S29WS256P<br>
+          Spansion S29WS512P<br>
+          Spansion S29WS512P<br>
+          ST M36W0R5040<br>
+          ST M36W0R6040<br>
+          ST M36W0R6050<br>
+          ST M58WR016<br>
+          ST M58WR032<br>
+          ST M58WR064<br>
+      </li>
+      <li>Support for some new MCUs:<br>
+          Analog Devices ADuC7061<br>
+          Analog Devices ADuC7062<br>
+          NXP LPC1766 ES<br>
+          NXP LPC2365<br>
+          NXP LPC2367<br>
+          NXP LPC2377<br>
+      </li>
+    </ol>
+  <h2 class="heading2">Version 4.00</h2>
+    <ol class="maintext">
+      <li>Support for Toshiba TMPM330.<br>
+      </li>
+    </ol>
+  <h2 class="heading2">Version 3.96a</h2>
+    <ol class="maintext">
+      <li>Support for some new flash devices:<br>
+          Eon EN29LV800BT<br>
+      </li>
+    </ol>
+  <h2 class="heading2">Version 3.92</h2>
+    <ol class="maintext">
+      <li>Support for Flasher ARM<br>
+      </li>
+    </ol>
+  <h2 class="heading2">Version 3.90</h2>
+    <ol class="maintext">
+      <li>Support for some new flash devices:<br>
+          Spansion S29GL01GP<br>
+          Spansion S29GL128P<br>
+          Spansion S29GL256P<br>
+          Spansion S29GL512P<br>
+      </li>
+      <li>Support for some new MCUs:<br>
+          Analog Devices ADuC7038<br>
+          ST STR910FAx32<br>
+          ST STR911FAx42<br>
+          ST STR911FAx44<br>
+          ST STR912FAx32<br>
+          ST STR912FAx42<br>
+          ST STR912FAx44<br>
+      </li>
+    </ol>
+  <h2 class="heading2">Version 3.82</h2>
+    <ol class="maintext">
+      <li>Support for some new flash devices:<br>
+          Luminary LM3S6918<br>
+      </li>
+    </ol>
+  <h2 class="heading2">Version 3.80</h2>
+    <ol class="maintext">
+      <li>Support for SWD (Serial Wire Debug).<br>
+      </li>
+    </ol>
+  <h2 class="heading2">Version 3.78a</h2>
+    <ol class="maintext">
+      <li>Support for some new flash devices:<br>
+          Spansion S29WS064J<br>
+          Spansion S29WS128J<br>
+          Spansion S29WS128N<br>
+          Spansion S29WS256N<br>
+      </li>
+      <li>Support for Cortex-M3 devices:<br>
+          Luminary LM3S series<br>
+          ST STM32 series<br>
+      </li>
+      <li>Support for ADuC7060 devices.<br>
+      </li>
+      <li>Support for custom RAMCode.<br>
+      </li>
+    </ol>
+  <h2 class="heading2">Version 3.74e</h2>
+    <ol class="maintext">
+      <li>Support for some new flash devices:<br>
+          Spansion S29GL032AxRx<br>
+          Spansion S29GL032AxWx<br>
+      </li>
+    </ol>
+  <h2 class="heading2">Version 3.74d</h2>
+    <ol class="maintext">
+      <li>Support for some new flash devices:<br>
+          Macronix MX29LV160C<br>
+          Macronix MX29LV400C<br>
+          Macronix MX29LV800C<br>
+          Spansion S29WS064J<br>
+          Spansion S29WS128J<br>
+          Spansion S29WS128N<br>
+          Spansion S29WS256N<br>
+      </li>
+    </ol>
+  <h2 class="heading2">Version 3.74a</h2>
+    <ol class="maintext">
+      <li>Option to select either engineering or simplified user interface mode.<br>
+      </li>
+    </ol>
+  <h2 class="heading2">Version 3.72a</h2>
+    <ol class="maintext">
+      <li>Support for some new Atmel devices:<br>
+          Atmel AT91SAM7X512<br>
+          Atmel AT91SAM7XC128<br>
+          Atmel AT91SAM7XC256<br>
+          Atmel AT91SAM7XC512<br>
+      </li>
+      <li>Support for some new flash devices:<br>
+          Spansion S29AL008<br>
+      </li>
+    </ol>
+  <h2 class="heading2">Version 3.68a</h2>
+    <ol class="maintext">
+      <li>Support for some new NXP devices:<br>
+          NXP LPC2109<br>
+          NXP LPC2468<br>
+          NXP LPC2478<br>
+      </li>
+    </ol>
+  <h2 class="heading2">Version 3.66a</h2>
+    <ol class="maintext">
+      <li>Support for some new flash devices:<br>
+          Intel 28F128P33<br>
+          Intel 28F256P33<br>
+          Intel 28F640P33<br>
+      </li>
+    </ol>
+  <h2 class="heading2">Version 3.62a</h2>
+    <ol class="maintext">
+      <li>Support for some new Atmel devices:<br>
+          Atmel AT91SAM7S512<br>
+          Atmel AT91SAM7SE32<br>
+          Atmel AT91SAM7SE256<br>
+          Atmel AT91SAM7SE512<br>
+      </li>
+    </ol>
+  <h2 class="heading2">Version 3.60a</h2>
+    <ol class="maintext">
+      <li>Verifying CRC of target instead of read back entire program.<br></li>
+      <li>New menu entry "File|Merge..." allows merging of data files.<br></li>
+      <li>Actions performed on "Auto" command can be configured.<br></li>
+    </ol>
+  <h2 class="heading2">Version 3.56a</h2>
+    <ol class="maintext">
+      <li>Automatically correction of PLL settings for TI TMS470 series.<br></li>
+      <li>Identification of flash devices by flash ID look up.<br></li>
+      <li>Support for some new NXP devices:<br>
+          NXP (Philips) LPC2364<br>
+          NXP (Philips) LPC2366<br>
+          NXP (Philips) LPC2368<br>
+          NXP (Philips) LPC2378<br>
+      </li>
+      <li>Support for new flash device:<br>
+          Spansion S29AL032D<br>
+      </li>
+    </ol>
+  <h2 class="heading2">Version 3.52a</h2>
+    <ol class="maintext">
+      <li>New feature: Automatic CPU clock frequency detection.</li>
+    </ol>
+  <h2 class="heading2">Version 3.46a</h2>
+    <ol class="maintext">
+      <li>Added new MCU devices:<br>
+          ST STR735F<br>
+          ST STR736F<br>
+      </li>
+    </ol>
+  <h2 class="heading2">Version 3.44a</h2>
+    <ol class="maintext">
+      <li>Added new flash devices:<br>
+          Atmel AT49BV160D<br>
+          Atmel AT49BV320D<br>
+          Atmel AT49BV322D<br>
+          Atmel AT49BV640D<br>
+          Atmel AT49BV642D<br>
+      </li>
+      <li>Added new MCU devices:<br>
+          ST STR750F<br>
+          ST STR751F<br>
+          ST STR752F<br>
+          ST STR755F<br>
+      </li>
+    </ol>
+  <h2 class="heading2">Version 3.42a</h2>
+    <ol class="maintext">
+      <li>Added new flash devices:<br>
+          ST M28W320FC<br>
+          ST M28W320FS<br>
+          ST M28W640EC<br>
+          ST M28W640FC<br>
+          ST M28W640FS<br>
+      </li>
+    </ol>
+  <h2 class="heading2">Version 3.40a</h2>
+    <ol class="maintext">
+      <li>Added new flash devices:<br>
+          Spansion S29AL016D<br>
+          Atmel AT49BV163D<br>
+      </li>
+    </ol>
+  <h2 class="heading2">Version 3.38a</h2>
+    <ol class="maintext">
+      <li>Added new MCU devices:<br>
+          Philips SJA2010<br>
+          Philips SJA2510<br>
+      </li>
+    </ol>
+  <h2 class="heading2">Version 3.36a</h2>
+    <ol class="maintext">
+      <li>Added new MCU devices:<br>
+          Philips LPC2101<br>
+          Philips LPC2102<br>
+          Philips LPC2103<br>
+          TI TMS470R1B512<br>
+          TI TMS470R1B768<br>
+          TI TMS470R1B1M<br>
+      </li>
+    </ol>
+  <h2 class="heading2">Version 3.32a</h2>
+    <ol class="maintext">
+      <li>Support for unsecuring MAC71xx devices added.</li>
+    </ol>
+  <h2 class="heading2">Version 3.30a</h2>
+    <ol class="maintext">
+      <li>Added new MCU devices:<br>
+          OKI ML67Q4050<br>
+          OKI ML67Q4051<br>
+          OKI ML67Q4060<br>
+          OKI ML67Q4061<br>
+      </li>
+    </ol>
+  <h2 class="heading2">Version 3.24a</h2>
+    <ol class="maintext">
+      <li>Added new flash devices:<br>
+          AMD Am29SL800D<br>
+          Sharp LH28F128SPHTD<br>
+          SST SST39VF6401B<br>
+          SST SST39VF6402B<br>
+      </li>
+    </ol>
+  <h2 class="heading2">Version 3.20a</h2>
+    <ol class="maintext">
+      <li>Added support for CFI compliant flash devices.<br></li>
+      <li>Added support for securing / unsecuring flash memory.<br></li>
+      <li>Added new flash devices:<br>
+          Intel 28F004B3<br>
+          Intel 28F008B3<br>
+          Intel 28F016B3<br>
+          Intel 28F160B3<br>
+          Intel 28F320B3<br>
+          Intel 28F400B3<br>
+          Intel 28F640B3<br>
+          Intel 28F800B3<br>
+          SST SST39VF160<br>
+          SST SST39VF320<br>
+          SST SST39VF640<br>
+          ST M29W400D<br>
+      </li>
+    </ol>
+  <h2 class="heading2">Version 3.12a</h2>
+    <ol class="maintext">
+      <li>Added new flash devices:<br>
+          Spansion S29GL032M<br>
+          Spansion S29GL064M<br>
+          Spansion S29GL128M<br>
+          Spansion S29GL256M<br>
+      </li>
+    </ol>
+  <h2 class="heading2">Version 3.10a</h2>
+    <ol class="maintext">
+      <li>Calculate CRC when opening data files.<br></li>
+      <li>Added new flash devices:<br>
+          Spansion S29GL128N<br>
+          Spansion S29GL256N<br>
+          Spansion S29GL512N<br>
+      </li>
+    </ol>
+  <h2 class="heading2">Version 3.00d</h2>
+    <ol class="maintext">
+      <li>Added new MCU devices:<br>
+          ST STR730FZ1<br>
+          ST STR730FZ2<br>
+          ST STR731FV0<br>
+          ST STR731FV1<br>
+          ST STR731FV2<br>
+          ST STR911FM32x<br>
+          ST STR911FM44x<br>
+          ST STR912FM32x<br>
+          ST STR912FM44x<br>
+      </li>
+      <li>Added new flash devices:<br>
+          AMD S71PL032J<br>
+          AMD S71PL064J<br>
+          AMD S71PL127J<br>
+          Intel 28F128P30B<br>
+          Intel 28F128P30T<br>
+          Intel 28F256P30B<br>
+          Intel 28F256P30T<br>
+          Intel 28F640P30B<br>
+          Intel 28F640P30T<br>
+      </li>
+    </ol>
+  <h2 class="heading2">Version 2.16a</h2>
+    <ol class="maintext">
+      <li>Support for adaptive clocking added.</li>
+    </ol>
+  <h2 class="heading2">Version 2.14a</h2>
+    <ol class="maintext">
+      <li>Added new MCU devices:<br>
+          Atmel AT91SAM7X128<br>
+          Atmel AT91SAM7X256<br>
+          Freescale MAC7101<br>
+          Freescale MAC7106<br>
+          Freescale MAC7111<br>
+          Freescale MAC7112<br>
+          Freescale MAC7116<br>
+          Freescale MAC7121<br>
+          Freescale MAC7122<br>
+          Freescale MAC7126<br>
+          Freescale MAC7131<br>
+          Freescale MAC7136<br>
+          Freescale MAC7141<br>
+          Freescale MAC7142<br>
+          Philips LPC2141<br>
+          Philips LPC2142<br>
+          Philips LPC2144<br>
+          Philips LPC2146<br>
+      </li>
+      <li>Option to check if program area is empty before program.</li>
+    </ol>
+  <h2 class="heading2">Version 2.12a</h2>
+    <ol class="maintext">
+      <li>Added new MCU devices:<br>
+          Analog Devices ADuC7229<br>
+          TI TMS470R1VF288<br>
+          Philips PCF87750<br><br>
+      </li>
+    </ol>
+  <h2 class="heading2">Version 2.10a</h2>
+    <ol class="maintext">
+      <li>Added new MCU devices:<br>
+          TI TMS470R1A64<br>
+          TI TMS470R1A288<br>
+          TI TMS470R1A384<br>
+          TI TMS470R1VF688<br>
+          TI TMS470R1VF689<br>
+      </li>
+      <li>Added new flash devices:<br>
+          ST M29W640D<br>
+          ST M29W800D<br>
+          Atmel AT49BV001A<br>
+          Atmel AT49BV002<br>
+          Atmel AT49BV040A<br>
+          Atmel AT49BV1024A<br>
+          Atmel AT49BV2048<br>
+          Atmel AT49BV320C<br>
+          Atmel AT49BV512<br>
+          Atmel AT49BV640<br>
+          Atmel AT49BV802A<br>
+          Atmel AT49F001A<br>
+          Atmel AT49F002A<br>
+          Atmel AT49F040A<br>
+          Atmel AT49F1024<br>
+          Atmel AT49F1024A<br>
+          Atmel AT49F2048A<br>
+          Atmel AT49F4096A<br>
+          Atmel AT49F512<br>
+          Atmel AT49LV2048<br>
+          Atmel AT49SV322A<br>
+          Atmel AT49SN3208<br>
+          Atmel AT49SN6416<br>
+      </li>
+    </ol>
+  <h2 class="heading2">Version 2.04a</h2>
+    <ol class="maintext">
+      <li>Support for Philips LPC2134 / LPC2136.</li>
+      <li>Some new flash devices added.</li>
+    </ol>
+  <h2 class="heading2">Version 2.02a</h2>
+    <ol class="maintext">
+      <li>Command line option added.</li>
+    </ol>
+  <h2 class="heading2">Version 2.00</h2>
+    <ol class="maintext">
+      <li>Added menu item help to open user manual.</li>
+    </ol>
+  <h2 class="heading2">Version 1.36g</h2>
+    <ol class="maintext">
+      <li>Added new project for LogicPD Zoom LH7A40x eval boards.</li>
+      <li>Added new flash device (ST M29DW128DF).</li>
+    </ol>
+  <h2 class="heading2">Version 1.36a</h2>
+    <ol class="maintext">
+      <li>Add ability to connect with J-Link via TCP/IP.</li>
+      <li>Add project for NetSilicon NS9360 eval. board.</li>
+      <li>Add flash devices (M29DW323Dx / M29DW324Dx / M29DW640D).</li>
+    </ol>
+  <h2 class="heading2">Version 1.34a</h2>
+    <ol class="maintext">
+      <li>Support for Philips LPC 213x series.</li>
+    </ol>
+  <h2 class="heading2">Version 1.32a</h2>
+    <ol class="maintext">
+      <li>Beta support for TI TMS470R1 A128/A256.</li>
+      <li>New menu points "Read back sectors" and "Read back chip".</li>
+    </ol>
+  <h2 class="heading2">Version 1.30a</h2>
+    <ol class="maintext">
+      <li>Support for second flash bank of STR71x series.</li>
+      <li>Full support for Samsung S3F445HX (includes DCC mode).</li>
+      <li>New flash devices and MCUs supported.</li>
+    </ol>
+  <h2 class="heading2">Version 1.28a</h2>
+    <ol class="maintext">
+      <li>Support for ATMEL SAM7 S32/S128/S256.</li>
+      <li>Support for ST STR711 / STR712.</li>
+      <li>Beta support for Samsung S3F445HX.</li>
+    </ol>
+  <h2 class="heading2">Version 1.24a</h2>
+    <ol class="maintext">
+      <li>Support for Analog Devices ADuC7020.</li>
+    </ol>
+  <h2 class="heading2">Version 1.22a</h2>
+    <ol class="maintext">
+      <li>Support for binary files.</li>
+      <li>Export of setup files.</li>
+      <li>MCU selection.</li>
+    </ol>
+  <h2 class="heading2">Version 1.20b</h2>
+    <ol class="maintext">
+      <li>Beta support for ATMEL's SAM7S64 chip.</li>
+    </ol>
+  <h2 class="heading2">Version 1.20a</h2>
+    <ol class="maintext">
+      <li>New menu point "EDIT | Eliminate blank areas".</li>
+    </ol>
+  <h2 class="heading2">Version 1.18a</h2>
+    <ol class="maintext">
+      <li>Programming internal flash for Philips LPC2xxx.</li>
+    </ol>
+  <!-------------------------------------------------------------------------->
+  <!-- Improvements                                                         -->
+  <!-------------------------------------------------------------------------->
+  <h1 class="newsbox"><a name="improvements">Improvements</a></h1>
+  <h2 class="heading2">Version 4.90c</h2>
+  <ol class="maintext">
+    <li>For devices where "secure chip" is not supported, the option is automatically "greyed". Improvements.</li>
+  </ol>
+  <h2 class="heading2">Version 4.90a</h2>
+  <ol class="maintext">
+    <li>When hitting "ESC" or "X" in the startup dialog, J-Flash was closed. Changed. Now only the dialog is closed and J-Flash creates a new project.</li>
+  </ol>
+  <h2 class="heading2">Version 4.84b</h2>
+  <ol class="maintext">
+    <li>So far, "Enable target power" option was only considered when auto programming has been performed. Now, it is always performed when acivated in project settings.</li>
+  </ol>
+  <h2 class="heading2">Version 4.72</h2>
+  <ol class="maintext">
+    <li>STM32L: Programming speed of EEPROM area improved.</li>
+    <li>Adapted new naming scheme of Nordi Semi devices.</li>
+  </ol>
+  <h2 class="heading2">Version 4.78</h2>
+  <ol class="maintext">
+    <li>Flash programming speed for Renesas RX200 devices improved (doubled).</li>
+  </ol>
+  <h2 class="heading2">Version 4.68</h2>
+  <ol class="maintext">
+    <li>Some flash sectors were not selected in the sample projects of AT91SAM4S devices by default. Corrected.</li>
+  </ol>
+  <h2 class="heading2">Version 4.78</h2>
+  <ol class="maintext">
+    <li>Flash programming speed for Renesas RX200 devices improved (doubled).</li>
+  </ol>
+  <h2 class="heading2">Version 4.66</h2>
+  <ol class="maintext">
+    <li>Flash programming speed for Atmel SAM4L series improved.</li>
+  </ol>
+  <h2 class="heading2">Version 4.62b</h2>
+  <ol class="maintext">
+    <li>Sectorization for Atmel ATSAM4S series optimized.</li>
+  </ol>
+  <h2 class="heading2">Version 3.78a</h2>
+    <ol class="maintext">
+      <li>Flash programming speed for blank Infineon XMC4xxx devices improved.</li>
+    </ol>
+  <h2 class="heading2">Version 3.78a</h2>
+    <ol class="maintext">
+      <li>Programming of second flash bank of ST STR91x devices.</li>
+      <li>Auto detection of JTAG scan chain configuration.</li>
+    </ol>
+  <h2 class="heading2">Version 3.72c</h2>
+    <ol class="maintext">
+      <li>RAMCode for Atmel AT91SAM7 series improved.</li>
+    </ol>
+  <h2 class="heading2">Version 3.70a</h2>
+    <ol class="maintext">
+      <li>New reset strategy for AT91SAM7 MCU's.</li>
+    </ol>
+  <h2 class="heading2">Version 3.60a</h2>
+    <ol class="maintext">
+      <li>Data window allows to edit items in gap areas.</li>
+    </ol>
+  <h2 class="heading2">Version 3.56b</h2>
+    <ol class="maintext">
+      <li>Feed watchdog for TI TMS470 devices.</li>
+    </ol>
+  <h2 class="heading2">Version 3.56a</h2>
+    <ol class="maintext">
+      <li>Auto unlock flash sectors during programming for Intel flashes and STR7 devices.</li>
+      <li>RAM check with auto RAM size detection.</li>
+    </ol>
+  <h2 class="heading2">Version 3.42b</h2>
+    <ol class="maintext">
+      <li>Improved performance of verify data.</li>
+    </ol>
+  <h2 class="heading2">Version 3.42a</h2>
+    <ol class="maintext">
+      <li>Data files are displayed in target endianess.</li>
+      <li>General speed improvement.</li>
+    </ol>
+  <h2 class="heading2">Version 3.30a</h2>
+    <ol class="maintext">
+      <li>Improved performance since new DLL is used.</li>
+    </ol>
+  <h2 class="heading2">Version 3.24a</h2>
+    <ol class="maintext">
+      <li>Improved performance since new DLL is used.</li>
+    </ol>
+  <h2 class="heading2">Version 3.20a</h2>
+    <ol class="maintext">
+      <li>Improved auto speed recognition.</li>
+      <li>New commands available for CPU init sequence.</li>
+    </ol>
+  <h2 class="heading2">Version 3.14a</h2>
+    <ol class="maintext">
+      <li>Improved handling of AT91SAM7A3.</li>
+      <li>Watchdog refresh for ADuC703x devices.</li>
+    </ol>
+  <h2 class="heading2">Version 3.12a</h2>
+    <ol class="maintext">
+      <li>Minor improvements.</li>
+    </ol>
+  <h2 class="heading2">Version 3.10e</h2>
+    <ol class="maintext">
+      <li>Improved memory access.</li>
+      <li>Improved JTAG handling.</li>
+    </ol>
+  <h2 class="heading2">Version 3.10c</h2>
+    <ol class="maintext">
+      <li>Allow to connect via USB to J-Link devices 0 to 3.</li>
+    </ol>
+  <h2 class="heading2">Version 3.10b</h2>
+    <ol class="maintext">
+      <li>Minor improvements.</li>
+    </ol>
+  <h2 class="heading2">Version 3.00h</h2>
+    <ol class="maintext">
+      <li>Minor improvements.</li>
+    </ol>
+  <h2 class="heading2">Version 3.00d</h2>
+    <ol class="maintext">
+      <li>Download performance improved.</li>
+    </ol>
+  <h2 class="heading2">Version 2.16c</h2>
+    <ol class="maintext">
+      <li>Added new flash devices: <br>
+          AMIC A29L400B<br>
+          AMIC A29L400T<br>
+          Atmel AT49SV802A<br>
+          Atmel AT49SV802AT<br>
+          ST STR711FR0xx<br>
+          ST STR712FR0xx<br>
+          ST STR715FR0xx<br>
+      </li>
+    </ol>
+  <h2 class="heading2">Version 2.14a</h2>
+    <ol class="maintext">
+      <li>Improved performance of DCC mode.</li>
+      <li>Improved programming performance for data files with many areas.</li>
+    </ol>
+  <h2 class="heading2">Version 2.12b</h2>
+    <ol class="maintext">
+      <li>Added new function "Disable MMU" to init sequence editor.</li>
+    </ol>
+  <h2 class="heading2">Version 2.12a</h2>
+    <ol class="maintext">
+      <li>Programming of some Intel flashes accelerated.</li>
+    </ol>
+  <h2 class="heading2">Version 2.10a</h2>
+    <ol class="maintext">
+      <li>Data file handling accelerated.</li>
+      <li>Display current address during program or verify in progbar window.</li>
+      <li>Change default settings: "Skip blank areas" is enabled.</li>
+    </ol>
+  <h2 class="heading2">Version 2.04c</h2>
+    <ol class="maintext">
+      <li>Added new project file for LogicPD LH79524 eval. board.</li>
+      <li>Added new flash devices: <br>
+          Sharp LH28F128BFHED<br>
+          Sharp LH28F640BFHE-PTTL<br>
+          Sharp LH28F640BFHE-PBTL<br>
+          Sharp LH28F640BFHG-PTTL<br>
+          Sharp LH28F640BFHG-PBTL<br>
+      </li>
+    </ol>
+  <h2 class="heading2">Version 2.04b</h2>
+    <ol class="maintext">
+      <li>Added new project files for AT91RM9200 eval. boards.</li>
+      <li>Automatically unlock sectors before erase or program.</li>
+    </ol>
+  <h2 class="heading2">Version 2.04a</h2>
+    <ol class="maintext">
+      <li>New DLL allows JTAG speed down to 1 kHz.</li>
+      <li>New function "Test speed" added.</li>
+      <li>Added project file for Atmel AT91RM9200 with external flash.</li>
+      <li>Added project file for Sharp LH75411 with external flash.</li>
+    </ol>
+  <h2 class="heading2">Version 2.00</h2>
+    <ol class="maintext">
+      <li>New license management system.</li>
+      <li>Improved erase algorithm for some Atmel flash devices.</li>
+      <li>Added project file for AT91FR40162 chip with internal flash.</li>
+    </ol>
+  <h2 class="heading2">Version 1.36f</h2>
+    <ol class="maintext">
+      <li>Divided all Analog Devices microcontrollers in different Revision steps.</li>
+    </ol>
+  <h2 class="heading2">Version 1.36e</h2>
+    <ol class="maintext">
+      <li>Improved support for Intel flash chips.</li>
+    </ol>
+  <h2 class="heading2">Version 1.36b</h2>
+    <ol class="maintext">
+      <li>Improved support for 2x 16bit configuration with Intel flash chips.</li>
+      <li>Improved support for big endian devices.</li>
+    </ol>
+  <h2 class="heading2">Version 1.34a</h2>
+    <ol class="maintext">
+      <li>Handling of scan chains with multiple devices.</li>
+      <li>Some flash devices added.</li>
+    </ol>
+  <h2 class="heading2">Version 1.30a</h2>
+    <ol class="maintext">
+      <li>Improved performance of some target operations.</li>
+    </ol>
+  <h2 class="heading2">Version 1.28a</h2>
+    <ol class="maintext">
+      <li>Improved performance of 'open mot files'.</li>
+      <li>Improved performance of 'read back target memory'.</li>
+    </ol>
+  <h2 class="heading2">Version 1.26a</h2>
+    <ol class="maintext">
+      <li>Added full support for ATMEL's SAM7.</li>
+    </ol>
+  <h2 class="heading2">Version 1.24c</h2>
+    <ol class="maintext">
+      <li>Improved support for ATMEL's SAM7S64 chip.</li>
+    </ol>
+  <h2 class="heading2">Version 1.22a</h2>
+    <ol class="maintext">
+      <li>Lock/unlock support for some devices.</li>
+    </ol>
+  <h2 class="heading2">Version 1.18a</h2>
+    <ol class="maintext">
+      <li>Connect behaviour has been improved</li>
+    </ol>
+  <!-------------------------------------------------------------------------->
+  <!-- PROGRAM CORRECTIONS                                                  -->
+  <!-------------------------------------------------------------------------->
+  <h1 class="newsbox"><a name="pcorr">Program corrections</a></h1>
+  <h2 class="heading2">Version 4.90c</h2>
+  <ol class="maintext">
+    <li>Under special circumstances, reading back the internal SPI flash of the Marvell 88MC200 could fail, in cases where the CPU was running at high speeds. Fixed.</li>
+    <li>Flash programming of SiLabs SiM3C and SiM3U devices failed. Fixed.</li>
+   <li>Firmware: Stand-alone-mode for devices with small RAM area could fail ( < 2 KB). Fixed.</li>
+  </ol>
+  <h2 class="heading2">Version 4.90a</h2>
+  <ol class="maintext">
+    <li>Under special circumstances, a stack overflow could occur when showing the available command line options. Fixed.</li>
+    <li>Depending on the system window styles, Log window and Project Window positions looked odd. Fixed.</li>
+  </ol>
+  <h2 class="heading2">Version 4.90</h2>
+  <ol class="maintext">
+    <li>Under special circumstances, flash programming (erase) did not work properly for Analog Devices ADUCM320 devices. Fixed.</li>
+    <li>Flash programming for STM32L0 devices did not work properly. Fixed.</li>
+    <li>Incorrect FLASH size has been reported for STM32F042xx series devices. Fixed.</li>
+    <li>When saving/downloading *.DAT files which do not fit into flash area, J-Flash crashed. Fixed.</li>
+	<li>Under special circumstances, data file was not correctly downloaded to Flasher. Fixed.</li>
+    <li>Flasher: Under special circumstances, data file was not correctly downloaded to Flasher. Fixed.</li>
+    <li>When PC entered/left sleep mode while J-Link was in idle (not in use), under special circumstances, J-Link communication was out of sync and J-Link needed to be power-cycled. Fixed. Affected models: J-Link BASE/EDU/PLUS V9, J-Link ULTRA+ V4, J-Link PRO V4</li>
+    <li>Incorrect FLASH size has been reported for some TI TM4C devices. Fixed.</li>
+  </ol>
+  <h2 class="heading2">Version 4.88a</h2>
+  <ol class="maintext">
+    <li>Added example project for ST SPC560P40 (PowerPC).</li>
+    <li>Improved example project for ST SPC560P50 (PowerPC).</li>
+    <li>Firmware: Flasher PPC: Firmware with support Nexus-1 PPC devices did not make it into V4.88. Fixed.</li>
+  </ol>
+  <h2 class="heading2">Version 4.86b</h2>
+  <ol class="maintext">
+    <li>DLL/Unsecure of STM32L1 devices did not work properly. Wrong reset values have been programmed to option bytes. Fixed.</li>
+  </ol>
+  <h2 class="heading2">Version 4.86</h2>
+  <ol class="maintext">
+    <li>Atmel AT91SAM/A3 flash programming: Watchdog was not handled correctly during flash programming. Fixed.</li>
+    <li>Incorrect RAM size has been reported for some ST STM32L100 series devices. Fixed.</li>
+    <li>Incorrect flash size has been reported for Silicon Labs EM351 and EM357 devices. Corrected.</li>
+    <li>STM32L: Auto-unsecure did not reset all option bytes to their default values, correctly. Fixed.</li>
+    <li>STM32L: Under special circumstances, EEPROM was not erased correctly. Fixed.</li>
+    <li>"Show CFI info" option was not greyed out if no CFI flash was selected in J-Flash. Fixed.</li>
+    <li>Changed default core ID mask for Cortex-M/A/R devices.</li>
+    <li>Changed default value of CPU clock speed in CPU settings tab from "0 Hz" to "Auto detection".</li>
+    <li>Changed default value of Target "Enable target power" when creating new projects from "enabled" to "disabled".</li>
+    <li>If "Cancel" was clicked in device selection dialog, previously selected device configuration was not preserved and lost. Fixed.</li>
+    <li>Renesas RX: If CPU is protected via IDCode, IDCode is now extracted from programming data, so manually entering it is no longer necessary.</li>
+    <li>So far, "Enable target power" option was only considered when auto programming has been performed. Now, it is always performed when acivated in project settings.</li>
+  </ol>
+  <h2 class="heading2">Version 4.84b</h2>
+  <ol class="maintext">
+    <li>"Show CFI info" option was not greyed out if no CFI flash was selected in J-Flash. Fixed.</li>
+  </ol>
+  <h2 class="heading2">Version 4.84</h2>
+  <ol class="maintext">
+    <li>Reported wrong sector size for TI TM4C123 devices. Fixed.</li>
+    <li>Under special circumstances, flash programming did not work properly for TI TM4C devices if watchdog was enabled. Fixed.</li>
+    <li>Sample projects for Freescale Kinetis V10 series devices were incorrectly configured for Cortex-M3 devices (V10 series is Cortex-M0+). Fixed.</li>
+    <li>Under special circumstances, when programming Freescale MAC71xxx series devices, J-Flash could crash. Fixed.</li>
+  </ol>
+  <h2 class="heading2">Version 4.82</h2>
+  <ol class="maintext">
+    <li>Under special circumstances flash secure/unsecure for ST STM32F3xx devices did not work properly. Fixed.</li>
+    <li>If error occurred during erasing/programming the QSPI flash on Renesas RZ devices, error flags in flash status register were not reset correctly. Fixed.</li>
+    <li>Under special circumstances, flash programming on Fujitsu/Spansion FM0+ devices did not work properly. Fixed.</li>
+    <li>Under special circumstances, unlimited flash breakpoints feature did not work properly on Fujitsu/Spansion FM0+ series devices. Fixed.</li>
+    <li>Incorrect RAM size has been reported for some ST STM32F105 / 107 devices. Fixed.</li>
+    <li>Freescale Kinetis V series devices: When inhibiting accidental secure of a device during flash programming, incorrect byte at address 0x40E was modified, instead of byte at address 0x40C. Fixed.</li>
+    <li>Open last data file did not work properly. Fixed.</li>
+    <li>Last data file opened with a specific project was not opened automatically on startup. Fixed.</li>
+    <li>-openprj command line option did not work properly. Fixed.</li>
+    <li>If "power target via J-Link" was enabled in production settings and "Start application" was also enabled, "start application" could fail. Fixed.</li>
+    <li>LPC43xx devices were listed as "Cortex-M3" instead of "Cortex-M4". Fixed.</li>
+    <li>RAM base address in NordicSemi nRF51422.jflash example project was configured incorrectly. Fixed.</li>
+  </ol>
+  <h2 class="heading2">Version 4.80</h2>
+  <ol class="maintext">
+    <li>Under special circumstances, flash programming failed on Marvell 88MC200 devices. Fixed.</li>
+    <li>Under special circumstances, programming of Spansion S29GLxxxS NOR flash devices could fail. Fixed.</li>
+    <li>Flash programming for STM32F2xx / STM32F4xx devices could fail if device was running at <= 2.0V VCC. Fixed.</li>
+    <li>If padding of programming data was necessary to achieve flash min. align requirements, data was always padded with 0xFF, even on flashes which have 0x00 as erased value, which caused verification errors. Fixed.</li>
+    <li>Under special circumstances, "chip erase" for AT91SAM9XE devices failed. Fixed.</li>
+    <li>Some Cortex-M4 target devices were listed as Cortex-M3. Fixed.</li>
+    <li>Cortex-M4 devices accidentally were listed as Cortex-M3. Fixed.</li>
+    <li>Energy Micro Zero Gecko Devices were listed as Cortex-M3 devices. Fixed.</li>
+    <li>Fujitsu/Spansion FM4 series MCUs were listed as Cortex-M3 instead of Cortex-M4. Fixed.</li>
+  </ol>
+  <h2 class="heading2">Version 4.78c</h2>
+  <ol class="maintext">
+    <li>Atmel ATSAMD20 devices were not detected/identified correctly. Fixed.</li>
+    <li>Special "Connect Under Reset" sequence did not work correctly for ST STM32F0 devices. Fixed.</li>
+    <li>STM32F050xG devices were missing in device selection. Fixed.</li>
+  </ol>
+  <h2 class="heading2">Version 4.78</h2>
+  <ol class="maintext">
+    <li>If Freescale Kinetis devices were in some special low-power mode, debugger connection could fail. Fixed/Improved.</li>
+    <li>Some Freescale MKL02, MKL16, MKL26, MKL34, MKL36 and MKL46 devices were missing in the device selection. Fixed.</li>
+    <li>When programming Kinetis devices with "allow security" selection and image data contained Kinetis security byte, under special circumstances security byte was not programmed correctly. Fixed.</li>
+    <li>When selecting "Download config & data file to Flasher" the connection to Flasher was left open after download has finished. Fixed.</li>
+  </ol>
+  <ol class="maintext">
+    <li>Under special circumstances, erasing of NXP LPC29xx devices could fail. Fixed.</li>
+    <li>RAM size for some Nordic Semi nRF51 devices corrected.</li>
+    <li>Flash sectorization for some Nordic Semi nRF51 devices corrected.</li>
+  </ol>
+  <h2 class="heading2">Version 4.74</h2>
+  <ol class="maintext">
+    <li>Incorrect flash information (custom RAMCode) caused problems in J-Flash. Fixed.</li>
+    <li>Corrected flash size for ADuCM331</li>
+  </ol>
+  <h2 class="heading2">Version 4.72</h2>
+  <ol class="maintext">
+    <li>When downloading into Kinetis data flash, under special circumstances an "address is out of data flash range" error was reported even if this was not the case. Fixed.</li>
+    <li>Analog Devices ADuCM350: Not the full 384 KB flash could be programmed. Fixed.</li>
+    <li>Under special circumstances, flash programming for MB9AF131K/L/M/N and MB9AF132K/L/M/N did not work correctly. Fixed.</li>
+    <li>When the project specified a SN and this J-Link was not found, J-Flash connected to another one. Fixed.</li>
+  </ol>
+  <h2 class="heading2">Version 4.66a</h2>
+    <ol class="maintext">
+      <li>J-Flash / Flasher: Under special circumstances, custom RAMCode handling did not work correctly and caused errors. Fixed.</li>
+      <li>Flasher stand-alone: Under special circumstances, when using Multi-Bank support in stand-alone mode, Flasher could run into memory-allocation problems causing the flash process to be aborted with error. Fixed.</li>
+      <li>Flasher stand-alone: Unsecure option did not work properly for STM32F0 devices. Fixed.</li>
+      <li>Flasher stand-alone: Erase sectors did not work properly for STM32F0 and STM32F1xxx "allow opt. bytes" selection. Fixed.</li>
+    </ol>
+  <h2 class="heading2">Version 4.66</h2>
+    <ol class="maintext">
+      <li>Under special circumstances, programming external NOR flash which uses Intel algorithm, has sectors locked by default and supports buffered writes, could cause problems. Fixed.</li>
+      <li>Unsecure option did not work properly for STM32F0 devices. Fixed.</li>
+      <li>Erase sectors did not work properly for STM32F0 and STM32F1xxx "allow opt. bytes" selection. Fixed.</li>
+    </ol>
+  <h2 class="heading2">Version 4.64</h2>
+    <ol class="maintext">
+      <li>Flasher ARM: For Freescale Kinetis devices with built-in DataFlash, erasing in stand-alone mode did not work properly when "Chip" was selected as erase setting in "Production" tab in J-Flash. Fixed.</li>
+      <li>Flasher ARM: For STM32F4 devices, erasing in stand-alone mode could fail if "Chip" was selected as erase setting in "Production" tab in J-Flash. Fixed.</li>
+      <li>When trying to open hex files which contain unknown/custom record types, J-Flash refused to open the file instead of just ignoring the unknown records. Fixed.</li>
+    </ol>
+  <h2 class="heading2">Version 4.62</h2>
+    <ol class="maintext">
+      <li>Flash programming did not work correctly for Fujitsu MB9AF131K, MB9AF131L, MB9AF132K, MB9AF132L. Fixed.</li>
+      <li>For some current LPC43xx devices reset did not work properly. Fixed.</li>
+    </ol>
+  <h2 class="heading2">Version 4.60</h2>
+    <ol class="maintext">
+      <li>Cortex-M0 devices did not work properly under special circumstances. Fixed.</li>
+      <li>Wrong device selected in the sample project ADuCRF101.jflash. Fixed.</li>
+    </ol>
+  <h2 class="heading2">Version 4.58</h2>
+    <ol class="maintext">
+      <li>Reported wrong sector size for FlexNVM area of Freescale Kinetis K series 72 MHz devices. Fixed.</li>
+      <li>Under special circumstances, flash programming on LPC1788 targets could fail if the CPU was running at >= 100 MHz. Fixed.</li>
+      <li>J-Flash used wrong sector size for some STM32F105/107 devices. Fixed.</li>
+      <li>Flasher ARM/RX/PPC: Core ID mask which has been configured in J-Flash was not used correctly in stand-alone mode, which could cause problems in stand-alone mode on some MCUs. Fixed.</li>
+    </ol>
+  <h2 class="heading2">Version 4.56a</h2>
+    <ol class="maintext">
+      <li>CFI detection of 1x8 Bit NOR flash combination did not work properly. Fixed.</li>
+    </ol>
+  <h2 class="heading2">Version 4.56</h2>
+    <ol class="maintext">
+      <li>First entry of device list (MCU.csv) was not shown in device selection dialog. Fixed.</li>
+      <li>RAMCode for LPC11Axx EEPROM programming did not detect some LPC1Axx devices correctly and reported an incorrect EEPROM size. Fixed.</li>
+    </ol>
+  <h2 class="heading2">Version 4.54d</h2>
+    <ol class="maintext">
+      <li>First entry of device list (MCU.csv) was not shown in device selection dialog. Fixed.</li>
+    </ol>
+  <h2 class="heading2">Version 4.54b</h2>
+    <ol class="maintext">
+      <li>RAMCode for LPC11Axx EEPROM programming did not detect some LPC1Axx devices correctly and reported an incorrect EEPROM size. Fixed.</li>
+    </ol>  
+  <h2 class="heading2">Version 4.54</h2>
+    <ol class="maintext">
+      <li>Some Luminary/TI LM3S devices with internal ROM bootloader were not handled correctly,<br />
+        &nbsp;&nbsp;so programming of blank devices caused problems. Fixed.<br />
+        &nbsp;&nbsp;Affected devices:<br />
+        &nbsp;&nbsp;LM3S1621<br />
+        &nbsp;&nbsp;LM3S1D21<br />
+        &nbsp;&nbsp;LM3S1H11<br />
+        &nbsp;&nbsp;LM3S1N11<br />
+        &nbsp;&nbsp;LM3S2B93<br />
+        &nbsp;&nbsp;LM3S2D93<br />
+        &nbsp;&nbsp;LM3S5632<br />
+        &nbsp;&nbsp;LM3S5732<br />
+        &nbsp;&nbsp;LM3S5951<br />
+        &nbsp;&nbsp;LM3S5K36<br />
+        &nbsp;&nbsp;LM3S5B91<br />
+        &nbsp;&nbsp;LM3S5R36<br />
+        &nbsp;&nbsp;LM3S5T36<br />
+        &nbsp;&nbsp;LM3S5Y36<br />
+        &nbsp;&nbsp;LM3S6G65</li>
+      <li>LPC18xx flash based devices: Under special circumstances, checksum was accidentally also merged into flash bank 1. Fixed.</li>
+    </ol>
+  <h2 class="heading2">Version 4.52a</h2>
+    <ol class="maintext"><li></li>
+      <li>Some Luminary/TI LM3S devices with internal ROM bootloader were not handled correctly, <br />
+        &nbsp;&nbsp;so programming of blank devices caused problems. Fixed.<br />
+        &nbsp;&nbsp;Affected devices:<br />
+        &nbsp;&nbsp;LM3S9790<br />
+        &nbsp;&nbsp;LM3S9792<br />
+        &nbsp;&nbsp;LM3S9997<br />
+        &nbsp;&nbsp;LM3S9B90<br />
+        &nbsp;&nbsp;LM3S9B92<br />
+        &nbsp;&nbsp;LM3S9B95<br />
+        &nbsp;&nbsp;LM3S9B96<br />
+        &nbsp;&nbsp;LM3S9C97<br />
+        &nbsp;&nbsp;LM3S9D92<br />
+        &nbsp;&nbsp;LM3S9D95<br />
+        &nbsp;&nbsp;LM3S9D96<br />
+        &nbsp;&nbsp;LM3S9L97<br />
+        &nbsp;&nbsp;LM3S9U81</li>
+    </ol>
+  <h2 class="heading2">Version 4.52</h2>
+    <ol class="maintext"><li></li>
+      <li>When downloading data & configuration to Flasher ARM for stand alone mode, on Flashes
+                 where not all sectors have 2KB aligned end addresses (e.g. TMS470R1B1M sector 0) an incorrect
+                 data file was produced which caused a programming fail in Flasher stand-alone mode. Fixed.</li>
+      <li>When having multiple Flashers connected and J-Flash was not configured to connect to a specific one,
+                 when selecting "Download to programmer" the emulator selection dialog popped up twice. Fixed.</li>
+      <li>When programming serial numbers, J-Flash reported an error that no serial number list file
+                 could be found even in cases where no serial number list file was needed.</li>
+      <li>Flash ID for EN29LV800BB was incorrect (0x1C22DA changed to 0x1C225B). Fixed.</li>
+      <li>Custom RAMCodes with > 2 KB size were not handled correctly. Fixed.</li>
+    </ol>
+  <h2 class="heading2">Version 4.50k</h2>
+    <ol class="maintext">
+      <li>"Erase chip" option generated a timeout error on Atmel AT91SAM3U1x and AT91SAM3U2x devices. Fixed.</li>
+      <li>Save data file as hex file did not work properly. Fixed.</li>
+    </ol>
+  <h2 class="heading2">Version 4.50g</h2>
+    <ol class="maintext">
+      <li>Under special circumstances, RAMCode for LPC11A EEPROM programming did not work properly when reading back EEPROM contents. Fixed.</li>
+    </ol>
+  <h2 class="heading2">Version 4.46e</h2>
+    <ol class="maintext">
+      <li>Incorrect data flash size reported for RX621/RX62N/RX62T devices. Fixed.</li>
+    </ol>
+  <h2 class="heading2">Version 4.46c</h2>
+    <ol class="maintext">
+      <li>When programming external flash memory, the device selection dialog popped up accidentally. Fixed.</li>
+      <li>Programming of Atmel AT91SAM3S devices did not work properly in stand-alone mode. Fixed.</li>
+    </ol>
+  <h2 class="heading2">Version 4.36l</h2>
+    <ol class="maintext">
+      <li>It was not allowed to select "big endian" for Renesas RX devices. Fixed.</li>
+      <li>If a project-relative script file path were used in the J-Flash CPU dialog, the path was not passed correctly to the DLL. Fixed.</li>
+    </ol>
+  <h2 class="heading2">Version 4.36j</h2>
+    <ol class="maintext">
+      <li>Flash programming support for Freescale Kinetis K70 did not work correctly. Fixed.</li>
+      <li>Some Freescale devices which are already supported, were not selectable. Fixed.</li>
+    </ol>
+  <h2 class="heading2">Version 4.36i</h2>
+    <ol class="maintext">
+      <li>J-Flash could crash if external flash memory required "soft unlocking" of flash sectors. Fixed.</li>
+      <li>For ST STM32F407IG, STM32F407VG and STM32F407ZG J-Flash reported an incorrect flash size. Fixed.</li>
+      <li>The following external NOR flash devices did not work properly. Fixed:
+                 Eon EN29LV800BB, EN29LV800BT, EN29LV160BB, EN29LV160BT</li>
+    </ol>
+  <h2 class="heading2">Version 4.36h</h2>
+    <ol class="maintext">
+      <li>J-Flash could crash when creating Flasher ARM data files if a custom RAMCode / Flash auto-detection setting was used. Fixed.</li>
+    </ol>
+
+
+
+
+    <h2 class="heading2">Version 4.34</h2>
+    <ol class="maintext">
+      <li>Flasher ARM: Under special circumstances, Flasher ARM could hang when trying to program a device in stand-alone mode.</li>
+    </ol>
+  <h2 class="heading2">Version 4.32</h2>
+    <ol class="maintext">
+      <li>Unsecure for Energy Micro EFM32Gxxx and EFM32TGxxx devices did not work properly. Fixed.</li>
+      <li>J-Flash could crash when programming a LPC device and adding a valid checksum to the data which was programmed. Fixed.</li>
+      <li>Old J-Flash projects which were configured for "NXP (Philips)" devices were not opened correctly. Fixed.</li>
+    </ol>
+  <h2 class="heading2">Version 4.04</h2>
+    <ol class="maintext">
+      <li>Download to emulator did not work properly. Fixed.</li>
+    </ol>
+  <h2 class="heading2">Version 4.00</h2>
+    <ol class="maintext">
+      <li>CRC calculation did not work properly. Fixed.</li>
+      <li>"Verify CRC" hangs on last sector in some cases. Fixed.</li>
+      <li>Flash programming of SST flashes did not work properly. Fixed.</li>
+    </ol>
+  <h2 class="heading2">Version 3.90b</h2>
+    <ol class="maintext">
+      <li>Target CPU was not halted automatically. Fixed.</li>
+    </ol>
+  <h2 class="heading2">Version 3.74d</h2>
+    <ol class="maintext">
+      <li>Open *.bin files from commandline did not work properly. Fixed.</li>
+    </ol>
+  <h2 class="heading2">Version 3.74a</h2>
+    <ol class="maintext">
+      <li>Flash programming for Atmel AT91SAM7A3 did not work properly. Fixed.</li>
+    </ol>
+  <h2 class="heading2">Version 3.72a</h2>
+    <ol class="maintext">
+      <li>Chip erase on old ADuC702x devices did not work properly. Fixed.</li>
+      <li>Verify CRC did not work properly in all cases. Fixed.</li>
+    </ol>
+  <h2 class="heading2">Version 3.64a</h2>
+    <ol class="maintext">
+      <li>Hex file parsing did not work properly. Fixed.</li>
+    </ol>
+  <h2 class="heading2">Version 3.58a</h2>
+    <ol class="maintext">
+      <li>Old reset commands of CPU init sequence did not work. Fixed.</li>
+    </ol>
+  <h2 class="heading2">Version 3.46a</h2>
+    <ol class="maintext">
+      <li>J-Flash commandline did not work properly. Fixed.</li>
+    </ol>
+  <h2 class="heading2">Version 3.42a</h2>
+    <ol class="maintext">
+      <li>J-Flash crashes sometimes when closing a data window. Fixed.</li>
+    </ol>
+  <h2 class="heading2">Version 2.16b</h2>
+    <ol class="maintext">
+      <li>Serial number of J-Link could change. Fixed.</li>
+    </ol>
+  <h2 class="heading2">Version 2.14a</h2>
+    <ol class="maintext">
+      <li>Progress bar does not update properly. Fixed.</li>
+    </ol>
+  <h2 class="heading2">Version 2.10a</h2>
+    <ol class="maintext">
+      <li>Incorrect device name "STR710FR". Changed to "STR710FZ".</li>
+    </ol>
+  <h2 class="heading2">Version 1.34a</h2>
+    <ol class="maintext">
+      <li>Some problems with big endian devices. Fixed.</li>
+    </ol>
+  <h2 class="heading2">Version 1.20a</h2>
+    <ol class="maintext">
+      <li>Project files not saved properly. Fixed.</li>
+    </ol>
+  <h2 class="heading2">Version 1.18a</h2>
+    <ol class="maintext">
+      <li>JTAG auto speed selection did not work properly. Fixed.</li>
+    </ol>
+  <!-------------------------------------------------------------------------->
+  <!-- KNOWN PROBLEMS                                                       -->
+  <!-------------------------------------------------------------------------->
+  <h1 class="newsbox"><a name="problems">Known problems in current version</a></h1>
+    <ol class="maintext">
+      <li>Load last project file and data file at startup.</li>
+    </ol>
+  <!-------------------------------------------------------------------------->
+  <!-- Release history                                                      -->
+  <!-------------------------------------------------------------------------->
+  <h1 class="newsbox"><a name="history">Release history</a></h1>
+  <table class="maintext">
+    <tr> 
+      <td width=20%>Version</td>
+      <td width=30%>Release date</td>
+      <td>Short explanation</td>
+    </tr>
+    <tr>
+      <td>V4.90c</td>
+      <td>Aug-29 2014</td>
+      <td>
+        New feature: Added flash programming support of the "Information Block - Lock Bits" for Silicon Labs EFM32 series devices.</br>
+        New feature: Added flash programming support for NXP LPC11E66 series.</br>
+        New feature: Added flash programming support for ST STM32F303x6, STM32F303x8, STM32F411xx and STM32L06xxx devices.</br>
+        New feature: Added flash programming support for Freescale KV40, KV43, KV44, KV45 and KV46 devices. (Cortex-M4)</br>
+        New feature: Sample project RX610_16bit_CFIFlash.jflash added.</br>
+        New feature: Sample project R5F56108_IntFlash_16bit_CFIFlash.jflash added.</br>
+        Improvements: For devices where "secure chip" is not supported, the option is automatically "greyed". Improvements.</br>
+        Correction: Under special circumstances, reading back the internal SPI flash of the Marvell 88MC200 could fail, in cases where the CPU was running at high speeds. Fixed.</br>
+        Correction: Flash programming of SiLabs SiM3C and SiM3U devices failed. Fixed.</br>
+        Correction: Flasher Firmware: Stand-alone-mode for devices with small RAM area could fail ( < 2 KB). Fixed.
+      </td>
+    </tr>
+    <tr>
+      <td>V4.90a</td>
+      <td>Aug-08 2014</td>
+      <td>
+        Improvements: When hitting "ESC" or "X" in the startup dialog, J-Flash was closed. Changed. Now only the dialog is closed and J-Flash creates a new project.</br>
+        Correction: Under special circumstances, a stack overflow could occur when showing the available command line options. Fixed.</br>
+        Correction: Depending on the system window styles, Log window and Project Window positions looked odd. Fixed.
+      </td>
+    </tr>
+    <tr>
+      <td>V4.90</td>
+      <td>Jul-25 2014</td>
+      <td>
+        New feature: Added flash programming support for Atmel ATSAM4CP16C, ATSAMD09C13, ATSAMD10 and ATSAMD11 series.</br>
+        Correction: Under special circumstances, flash programming (erase) did not work properly for Analog Devices ADUCM320 devices. Fixed.</br>
+        Correction: Flash programming for STM32L0 devices did not work properly. Fixed.</br>
+        Correction: Incorrect FLASH size has been reported for STM32F042xx series devices. Fixed.</br>
+        Correction: When saving/downloading *.DAT files which do not fit into flash area, J-Flash crashed. Fixed.</br>
+        Correction: Under special circumstances, data file was not correctly downloaded to Flasher. Fixed.</br>
+        Correction: When PC entered/left sleep mode while J-Link was in idle (not in use), under special circumstances, J-Link communication was out of sync and J-Link needed to be power-cycled. Fixed. Affected models: J-Link BASE/EDU/PLUS V9, J-Link ULTRA+ V4, J-Link PRO V4</br>
+        Correction: Incorrect FLASH size has been reported for some TI TM4C devices. Fixed.
+      </td>
+    </tr>
+    <tr>
+      <td>V4.86</td>
+      <td>Jun-06 2014</td>
+      <td>
+        New feature: Added flash programming support for Freescale MKL13, MKL23 and MKL33 devices.</br>
+        New feature: Added flash programming support for MAXIM MAX32550 devices.</br>
+        New feature: Added flash programming support for NXP LPC11E67, LPC11E68, LPC11U67 and LPC11U68 devices.</br>
+        New feature: Added flash programming support for PSoC4A-BLE devices. (Cortex-M0)</br>
+        New feature: Added flash programming support for ST STA8088 (SAL version) + external 2MB flash devices. (ARM946E-S)</br>
+        New feature: Added flash programming support for ST STA8088 external SQI flash. (ARM946E-S)</br>
+        New feature: Added flash programming support for ST STM32F078CB, STM32F078RB and STM32F078VB devices.</br>
+        New feature: Added flash programming support for ST STM32L162ZE devices.</br>
+        New feature: Added flash programming support for Silicon Labs EM358x devices.</br>
+        New feature: QSPI flash programming support for Vybrid Cortex-A5 devices added.</br>
+        New feature: QSPI parallel mode flash programming support for Vybrid Cortex-A5 devices added.</br>
+        New feature: Addedd support for merging data files with overlapping areas.
+        Correction: Atmel AT91SAM/A3 flash programming: Watchdog was not handled correctly during flash programming. Fixed.</br>
+        Correction: Incorrect RAM size has been reported for some ST STM32L100 series devices. Fixed.</br>
+        Correction: Incorrect flash size has been reported for Silicon Labs EM351 and EM357 devices. Corrected.</br>
+        Correction: STM32L: Auto-unsecure did not reset all option bytes to their default values, correctly. Fixed.</br>
+        Correction: STM32L: Under special circumstances, EEPROM was not erased correctly. Fixed.</br>
+        Correction: "Show CFI info" option was not greyed out if no CFI flash was selected in J-Flash. Fixed.</br>
+        Correction: Changed default core ID mask for Cortex-M/A/R devices.</br>
+        Correction: Changed default value of CPU clock speed in CPU settings tab from "0 Hz" to "Auto detection".</br>
+        Correction: Changed default value of Target "Enable target power" when creating new projects from "enabled" to "disabled".</br>
+        Correction: If "Cancel" was clicked in device selection dialog, previously selected device configuration was not preserved and lost. Fixed.</br>
+        Correction: Renesas RX: If CPU is protected via IDCode, IDCode is now extracted from programming data, so manually entering it is no longer necessary.</br>
+        Correction: So far, "Enable target power" option was only considered when auto programming has been performed. Now, it is always performed when acivated in project settings.
+      </td>
+    </tr>
+    <tr>
+      <td>V4.84b</td>
+      <td>Apr-15 2014</td>
+      <td>
+        Improvment: So far, "Enable target power" option was only considered when auto programming has been performed. Now, it is always performed when acivated in project settings.</br>
+        Correction: "Show CFI info" option was not greyed out if no CFI flash was selected in J-Flash. Fixed.
+      </td>
+    </tr>
+    <tr>
+      <td>V4.84a</td>
+      <td>Apr-04 2014</td>
+      <td>
+        Correction: If "Cancel" was clicked in device selection dialog, previously selected device configuration was not preserved and lost. Fixed.
+      </td>
+    </tr>
+    <tr>
+      <td>V4.84</td>
+      <td>Mar-28 2014</td>
+      <td>
+        New feature: Added full J-Link support for Toshiba TMPM351 devices. (Cortex-M3)</br>
+        New feature: Added full J-Link support for NXP LPC15xx devices. (Cortex-M3)</br>
+        New feature: Added full J-Link support for Spansion MB9AF120/420 devices. (Cortex-M3)</br>
+        New feature: Added full J-Link support for Actel (now Microsemi) A2F060M3x, A2F200M3x and A2F500M3x devices. (Cortex-M3)</br>
+        New feature: Added flash programming support for TI TM4C1294KCPDT, TM4C1297NCZAD,
+                                               TM4C1299KCZAD, TM4C1299NCZAD,
+                                               TM4C129EKCPDT, TM4C129LNCZAD,
+                                               TM4C129XKCZAD</br>
+        New feature: Added full J-Link support for Freescale KW01 devices. (Cortex-M0)</br>
+        New feature: Added sample projects for NXP LPC15xx devices. (Cortex-M3)</br>
+        New feature: Added sample projects for Actel (now Microsemi) A2F060M3x, A2F200M3x and A2F500M3x devices. (Cortex-M3)</br>
+        Correction: Reported wrong sector size for TI TM4C123 devices. Fixed.</br>
+        Correction: Under special circumstances, flash programming did not work properly for TI TM4C devices if watchdog was enabled. Fixed.</br>
+        Correction: Sample projects for Freescale Kinetis V10 series devices were incorrectly configured for Cortex-M3 devices (V10 series is Cortex-M0+). Fixed.</br>
+        Correction: Under special circumstances, when programming Freescale MAC71xxx series devices, J-Flash could crash. Fixed.</br>
+      </td>
+    </tr>
+    <tr>
+      <td>V4.82</td>
+      <td>Mar-10 2014</td>
+      <td>
+        New feature: Infineon XMC1000 series devices device names changed. (Old names are still accepted).</br>
+        New feature: Added flash programming support for Infineon XMC1100-0008.</br>
+        New feature: Added full J-Link support for Freescale KL03 series.</br>
+        New feature: Added full J-Link support for Toshiba TMPM358 device.</br>
+        New feature: Added full J-Link support for Freescale KE06 series.</br>
+        New feature: Added full J-Link support for Freescale KE04 series.</br>
+        New feature: Added full J-Link support for ST LIS331EB (Cortex-M0).</br>
+        New feature: Added support for programming customer information block of Ember/SiLabs EM351/357 devices.</br>
+        New feature: Added full J-Link support for ST STM32F042 series devices. (Cortex-M0)</br>
+        New feature: Added full J-Link support for ST STM32F401 series devices. (Cortex-M4)</br>
+        New feature: Added full J-Link support for Toshiba TMPM358FDTFG. (Cortex-M3)</br>
+        New feature: Added full J-Link support for ST STM32L151xE, STM32L152xE series devices.</br>
+        New feature: Added full J-Link support for ST STM32F031 series devices. (Cortex-M0)</br>
+        New feature: Added full J-Link support for ST STM32F071 series devices. (Cortex-M0)</br>
+        New feature: Added full J-Link support for ST STM32F072 series devices. (Cortex-M0)</br>
+        New feature: Added full J-Link support for Freescale Kinetis MK22FN256xxx12, MK22FN512xxx12 series devices (Cortex-M4).</br>
+        New feature: Added full J-Link support for Freescale Kinetis V31-series devices (Cortex-M4).</br>
+        New feature: Added full J-Link support for Spansion FM0+ series devices. (Cortex-M0+)</br>
+        New feature: Added flash programming support for Spansion MB9BF128S/T, MB9BF129S/T,</br>
+                                                     MB9BF328S/T, MB9BF329S/T,</br>
+                                                     MB9BF428S/T, MB9BF429S/T,</br>
+                                                     MB9BF528S/T, MB9BF529S/T</br>
+        New feature: Added full J-Link support for Freescale W-series devices. (Cortex-M4)</br>
+        New feature: Added sample project for ST STM32F4x9I 1x16 CFI NOR flash on nCS0.</br>
+        New feature: Added parallel NOR flash SST SST39VF1681, SST39VF1682</br>
+        New feature: Added new feature which allows turning off power supply via pin-19 when closing J-Flash if configured in project settings.</br>
+        New feature: Added support for Atmel ATSAMG51/53/54 devices.</br>
+        New feature: Added option byte programming support for ST STM32L series.</br>
+        New feature: Added secure/unsecure support for ST STM32L series.</br>
+        New feature: Added sample projects for Freescale KW series.</br>
+        New feature: Added sample projects for Spansion MB9AFxxxx, MB9BFxxxx and S6E1Axxx devices.</br>
+        New feature: Added sample projects for ST STM32F072 series devices. (Cortex-M0)</br>
+        New feature: Added sample projects for Freescale Kinetis V31-series devices (Cortex-M4).</br>
+        New feature: Added example project for Renesas RZ (Cortex-A9) parallel CFI NOR flash programming.</br>
+        New feature: Added example project: STM32F405OE_OptBytes.jflash</br>
+        New feature: ser Guide: Added description for STM32F2 / STM32F4 option byte programming support. See device specifics section.</br>
+        Improvement: STM32L: Programming speed of EEPROM area improved.</br>
+        Improvement: Adapted new naming scheme of Nordi Semi devices.</br>
+        Correction: Under special circumstances flash secure/unsecure for ST STM32F3xx devices did not work properly. Fixed.</br>
+        Correction: If error occurred during erasing/programming the QSPI flash on Renesas RZ devices, error flags in flash status register were not reset correctly. Fixed.</br>
+        Correction: Under special circumstances, flash programming on Fujitsu/Spansion FM0+ devices did not work properly. Fixed.</br>
+        Correction: Under special circumstances, unlimited flash breakpoints feature did not work properly on Fujitsu/Spansion FM0+ series devices. Fixed.</br>
+        Correction: Incorrect RAM size has been reported for some ST STM32F105 / 107 devices. Fixed.</br>
+        Correction: Freescale Kinetis V series devices: When inhibiting accidental secure of a device during flash programming, incorrect byte at address 0x40E was modified, instead of byte at address 0x40C. Fixed.</br>
+        Correction: Open last data file did not work properly. Fixed.</br>
+        Correction: Last data file opened with a specific project was not opened automatically on startup. Fixed.</br>
+        Correction: -openprj command line option did not work properly. Fixed.</br>
+        Correction: If "power target via J-Link" was enabled in production settings and "Start application" was also enabled, "start application" could fail. Fixed.</br>
+        Correction: LPC43xx devices were listed as "Cortex-M3" instead of "Cortex-M4". Fixed.</br>
+        Correction: RAM base address in NordicSemi nRF51422.jflash example project was configured incorrectly. Fixed.
+      </td>
+    <tr>
+      <td>V4.80</td>
+      <td>Jan-06 2014</td>
+      <td>
+        New feature: Added QSPI flash programming support for Renesas RZ devices.<br />
+        New feature: Added support for MicroSemi SmartFusion2 series devices. (M2S005, M2S025, M2S050, M2S080, M2S120)<br />
+        New feature: Added support for Freescale KV10 series devices.<br />
+        New feature: Added flash programming support for Freescale MK21FN1M0xxx12, MK21FX512xxx12, MK22FN1M0xxx12, MK22FX512xxx12 series devices.<br />
+        New feature: Added flash programming support for Toshiba TMPM350FDTFG.<br />
+        New feature: Added flash programming support for Renesas R5F5631F, R5F5631G, R5F5631J, R5F5631K, R5F5631M, R5F5631N, R5F5631P, R5F5631W, R5F5631Y<br />
+        New feature: Added flash programming support for Renesas R5F563NF, R5F563NG, R5F563NJ, R5F563NK, R5F563NW, R5F563NY<br />
+        New feature: Added full J-Link / Flasher support (Flash download + unlimited number of breakpoints in flash) for Toshiba TMPM36BF10FG (Cortex-M3).<br />
+        New feature: Added full J-Link / Flasher support (Flash download + unlimited number of breakpoints in flash) for Toshiba ATSAM4CMS16C (Cortex-M4).<br />
+        New feature: Added full J-Link / Flasher support (Flash download + unlimited number of breakpoints in flash) for Silicon Labs SiM3C1xx, SiM3L1xx and SiM3U1xx devices.<br />
+        New feature: Added sample projects for Silicon Labs SiM3C1xx, SiM3L1xx and SiM3U1xx devices.<br />
+        New feature: Added command line option for merging data files (-merge).<br />
+        New feature: Added Cutera LH28F128BFHED-473 parallel NOR flash to the list of selectable NOR flash devices.<br />
+        New feature: Added sample projects for Renesas RZ devices.<br />
+        New feature: Added sample projects for MicroSemi SmartFusion2 series devices. (M2S005, M2S025, M2S050, M2S080, M2S120)<br />
+        New feature: Added sample projects for Freescale KV10 series devices.<br />
+        Correction: Under special circumstances, flash programming failed on Marvell 88MC200 devices. Fixed.<br />
+        Correction: Under special circumstances, programming of Spansion S29GLxxxS NOR flash devices could fail. Fixed.<br />
+        Correction: Flash programming for STM32F2xx / STM32F4xx devices could fail if device was running at <= 2.0V VCC. Fixed.<br />
+        Correction: If padding of programming data was necessary to achieve flash min. align requirements, data was always padded with 0xFF, even on flashes which have 0x00 as erased value, which caused verification errors. Fixed.<br />
+        Correction: Under special circumstances, "chip erase" for AT91SAM9XE devices failed. Fixed.<br />
+        Correction: Some Cortex-M4 target devices were listed as Cortex-M3. Fixed.<br />
+        Correction: Cortex-M4 devices accidentally were listed as Cortex-M3. Fixed.<br />
+        Correction: Energy Micro Zero Gecko Devices were listed as Cortex-M3 devices. Fixed.<br />
+        Correction: Fujitsu/Spansion FM4 series MCUs were listed as Cortex-M3 instead of Cortex-M4. Fixed.
+      </td>
+    </tr>
+    <tr>
+      <td>V4.78</td>
+      <td>Oct-02 2013</td>
+      <td>
+        New feature: Added support for Analog Device CM40x series.<br />
+        New feature: Added support for Energy Micro Zero Gecko series.<br />
+        New feature: Added support for Atmel SAM4E series devices.<br />
+        New feature: Added support for Infineons Econometer series (UMF1110, UMF1120, UMF5110, UMF5120).<br />
+        New feature: Added support for Toshiba TMPM440 series.<br />
+        New feature: Added support for Texas Instrument TM4C and TM4E series.<br />
+        New feature: Added support for Fujitsu FM4 series.<br />
+        New feature: Options -> Project settings -> Flash now shows absolute sector addresses in detailed sector view.<br />
+        New feature: Added sample projects for Atmel SAM4C and SAM4E series devices.<br />
+        New feature: Added sample projects for Analog Device CM40x series.<br />
+        New feature: Added sample projects for Energy Micro Zero Gecko series.<br />
+        New feature: Added sample projects for Infineons Econometer series.<br />
+        New feature: Added sample projects for Texas Instrument TMS570LS, RM42 and RM46 devices.<br />
+        New feature: Added sample projects for Texas Instrument TM4C and TM4E series.<br />
+        New feature: Added sample projects for Toshiba TMPM440 series.<br />
+        New feature: Max. selectable RAMSize to be used by J-Flash for programming, extended to 512 KB (for devices which provide that much RAM).<br />
+        Improvement: Flash programming speed for Renesas RX200 devices improved (doubled).<br />
+        Correction: If Freescale Kinetis devices were in some special low-power mode, debugger connection could fail. Fixed/Improved.<br />
+        Correction: Some Freescale MKL02, MKL16, MKL26, MKL34, MKL36 and MKL46 devices were missing in the device selection. Fixed.<br />
+        Correction: When programming Kinetis devices with "allow security" selection and image data contained Kinetis security byte, under special circumstances security byte was not programmed correctly. Fixed.<br />
+        Correction: When selecting "Download config & data file to Flasher" the connection to Flasher was left open after download has finished. Fixed.
+      </td>
+    </tr>
+    <tr>
+      <td>V4.76</td>
+      <td>Aug-23 2013</td>
+      <td>
+        New feature: Added support for Analog Devices ADuCM320.<br />
+        New feature: Added support for ST STM32F052 series.<br />
+        New feature: Added support for Marvell 88MC200 series MCUs.<br />
+        New feature: Added support for ST STM32F429 series.<br />
+        New feature: Added support for ST STM32F439 series.<br />
+        New feature: Added sample project for ST STM32F429ZI
+        New feature: Added support for Reneasas R-IN32M3 series CPUs.<br />
+        New feature: Added support for ST STM32F030 series CPUs.<br />
+        New feature: Added support for Renesas RX210 series devices.<br />
+        New feature: Added support for Renesas RX111 series devices.<br />
+        New feature: Added sample project for Analog Devices ADuCM320.<br />
+        New feature: Added sample project for Atmel AT91SAM9261 + DataFlash on SPI0.<br />
+        New feature: Added sample projects for ST STM32F030 series CPUs.<br />
+        New feature: Added sample projects for Reneasas R-IN32M3 series CPUs.<br />
+        Correction: Under special circumstances, erasing of NXP LPC29xx devices could fail. Fixed.<br />
+        Correction: RAM size for some Nordic Semi nRF51 devices corrected.<br />
+        Correction: Flash sectorization for some Nordic Semi nRF51 devices corrected.
+      </td>
+    </tr>
+    <tr>
+      <td>V4.74</td>
+      <td>Jul-16 2013</td>
+      <td>
+        Correction: Incorrect flash information (custom RAMCode) caused problems in J-Flash. Fixed.<br />
+        Correction: Corrected flash size for ADuCM331<br />
+        New feature: Added Cypress PSoC4 series<br />
+        New feature: Added Energy Micro EFM32WG (Wonder Gecko) series<br />
+        New feature: Added Nordic Semi nRF51922_xxAA<br />
+        New feature: Added ST STM32F405OE, STM32F405OG<br />
+        New feature: Added Atmel ATSAM4LC8A, ATSAM4LC8B, ATSAM4LC8C<br />
+        New feature: Added Atmel ATSAMD20 series<br />
+        New feature: Added startup dialog/wizard for project creation/selection.<br />
+        New feature: Added Nordic Semi nRF51422_xxAA, nRF51822_xxAA, nRF51822_xxAB<br />
+        New feature: Added sample projects for Atmel ATSAMD20 series<br />
+        New feature: Added sample projects for Energy Micro EFM32WG (Wonder Gecko) series<br />
+        New feature: Added sample projects for Cypress PSoC4 series<br />
+      </td>
+    </tr>
+    <tr>
+      <td>V4.72</td>
+      <td>Jun-12 2013</td>
+      <td>
+        Support for new MCUs added: TI CC2538NF11, CC2538NF23, CC2538NF53, CC2538SF23, CC2538SF53, CM2538SF23, CM2538SF53<br />
+        Support for new MCUs added: Atmel AT91SAM4N8A, AT91SAM4N8B, AT91SAM4N8C, AT91SAM4N16B, AT91SAM4N16C<br />
+        Support for new MCUs added: Freescale MKE02Z16xxx2, MKE02Z32xxx2, MKE02Z64xxx2<br />
+        When downloading into Kinetis data flash, under special circumstances an "address is out of data flash range" error was reported even if this was not the case. Fixed.<br />
+        Analog Devices ADuCM350: Not the full 384 KB flash could be programmed. Fixed.
+        Under special circumstances, flash programming for MB9AF131K/L/M/N and MB9AF132K/L/M/N did not work correctly. Fixed.<br />
+        When the project specified a SN and this J-Link was not found, J-Flash connected to another one. Fixed.
+      </td>
+    </tr>
+    <tr>
+      <td>V4.66a</td>
+      <td>Mar-25 2013</td>
+      <td>J-Flash / Flasher: Under special circumstances, custom RAMCode handling did not work correctly and caused errors. Fixed.<br />
+          Flasher stand-alone: Under special circumstances, when using Multi-Bank support in stand-alone mode, Flasher could run into memory-allocation problems causing the flash process to be aborted with error. Fixed.</td>
+    </tr>
+    <tr>
+      <td>V4.62</td>
+      <td>Jan-25 2013</td>
+      <td>New feature: Support for some new MCUs added.<br />
+          Correction: Flash programming did not work correctly for Fujitsu MB9AF131K, MB9AF131L, MB9AF132K, MB9AF132L. Fixed.<br />
+          Correction: For some current LPC43xx devices reset did not work properly. Fixed.</td>
+    </tr>
+    <tr>
+      <td>V4.60</td>
+      <td>Jan-14 2013</td>
+      <td>New Feature: Support for some new MCUs added.<br />
+          New Feature: Added sample project TB6865FG.jflash<br />
+          New Feature: LPC1810, LPC1820, LPC1830, LPC1850 SPIFI flash programming support added.<br />
+          Correction: Cortex-M0 devices did not work properly under special circumstances. Fixed.<br />
+          Correction: Wrong device selected in the sample project ADuCRF101.jflash. Fixed.</td>
+    </tr>
+    <tr>
+      <td>V4.58</td>
+      <td>Nov-29 2012</td>
+      <td>New Feature: Support for some new MCUs added.<br />
+          New Feature: Some sample projects added.<br />
+          Correction: J-Flash used wrong sector size for some STM32F105/107 devices. Fixed.<br />
+          Smaller program corrections</td>
+    </tr>
+    <tr>
+      <td>V4.56a</td>
+      <td>Nov-05 2012</td>
+      <td>Correction: CFI detection of 1x8 Bit NOR flash combination did not work properly. Fixed.</td>
+    </tr>
+    <tr>
+      <td>V4.56</td>
+      <td>Oct-22 2012</td>
+      <td>New Feature: Support for some new MCUs added.<br />
+      New Feature: Some J-Flash projects added.<br />
+      Correction: First entry of device list (MCU.csv) was not shown in device selection dialog. Fixed.<br />
+      Correction: RAMCode for LPC11Axx EEPROM programming did not detect some LPC1Axx devices correctly and reported an incorrect EEPROM size. Fixed.</td>
+    </tr>
+    <tr>
+      <td>V4.54d</td>
+      <td>Oct-16 2012</td>
+      <td>Correction: First entry of device list (MCU.csv) was not shown in device selection dialog. Fixed.</td>
+    </tr>
+    <tr>
+      <td>V4.54b</td>
+      <td>Oct-02 2012</td>
+      <td>Correction: RAMCode for LPC11Axx EEPROM programming did not detect some LPC1Axx devices correctly and reported an incorrect EEPROM size. Fixed.</td>
+    <tr>
+      <td>V4.54</td>
+      <td>Sep-11 2012</td>
+      <td>New Feature: Support for some new MCUs added.<br />
+      New Feature: Some J-Flash projects added.<br />
+      Correction: Some Luminary/TI LM3S devices with internal ROM bootloader were not handled correctly,
+        so programming of blank devices caused problems. Fixed.<br />
+      Correction: LPC18xx flash based devices: Under special circumstances, checksum was accidentally also merged into flash bank 1. Fixed.</td>
+    </tr>
+    <tr>
+      <td>V4.52a</td>
+      <td>Aug-17 2012</td>
+      <td>Correction: Some Luminary/TI LM3S devices with internal ROM bootloader were not handled correctly, so programming of blank devices caused problems. Fixed.</td>
+    </tr>
+    <tr>
+      <td>V4.52</td>
+      <td>Aug-03 2012</td>
+      <td>New Feature: Support for some new MCUs added.<br />
+      New Feature: Some J-Flash projects added.<br />
+      Correction: When downloading data & configuration to Flasher ARM for stand alone mode, on Flashes where not all sectors have 2KB aligned end addresses (e.g. TMS470R1B1M sector 0) an incorrect data file was produced which caused a programming fail in Flasher stand-alone mode. Fixed.<br />
+      Correction: When having multiple Flashers connected and J-Flash was not configured to connect to a specific one, when selecting "Download to programmer" the emulator selection dialog popped up twice. Fixed.<br />
+      Correction: When programming serial numbers, J-Flash reported an error that no serial number list file could be found even in cases where no serial number list file was needed.<br />
+      Correction: Flash ID for EN29LV800BB was incorrect (0x1C22DA changed to 0x1C225B). Fixed.<br />
+      Correction: Custom RAMCodes with > 2 KB size were not handled correctly. Fixed.</td>
+    </tr>
+    <tr> 
+      <td>V4.50k</td>
+      <td>Jul-02 2012</td>
+      <td>Correction: Save data file as hex file did not work properly. Fixed.<br>
+      Correction: "Erase chip" option generated a timeout error on Atmel AT91SAM3U1x and AT91SAM3U2x devices. Fixed.</td>
+    </tr>
+    <tr> 
+      <td>V4.50g</td>
+      <td>Jun-11 2012</td>
+      <td>Correction: Under special circumstances, RAMCode for LPC11A EEPROM programming did not work properly when reading back EEPROM contents. Fixed.</td>
+    </tr>
+    <tr> 
+      <td>V4.50</td>
+      <td>Jun-01 2012</td>
+      <td>New feature: Support for some new MCUs.</td>
+    </tr>
+    <tr> 
+      <td>V4.46e</td>
+      <td>May-11 2012</td>
+      <td>Correction: Incorrect data flash size reported for RX621/RX62N/RX62T devices. Fixed.</td>
+    </tr>
+    <tr> 
+      <td>V4.46c</td>
+      <td>Apr-20 2012</td>
+      <td>Correction: Programming of Atmel AT91SAM3S devices did not work properly in stand-alone mode. Fixed.<br>
+      Correction: When programming external flash memory, the device selection dialog popped up accidentally. Fixed.</td>
+    </tr>
+    <tr>
+      <td>V4.46</td>
+      <td>Apr-12 2012</td>
+      <td>New feature: Sample project LM4F232H5.jflash added.<br>
+      New feature: Support for some new MCUs.<br>
+      Correction: Under special circumstances, flashing of AyDeeKay uSobek devices could fail with "RAM check failed"</td>
+    </tr>
+    <tr>
+      <td>V4.44</td>
+      <td>Mar-19 2012</td>
+      <td>New feature: Support for some new MCUs.</td>
+    </tr>
+    <tr> 
+      <td>V4.42</td>
+      <td>Feb-07 2012</td>
+      <td>New feature: Added sample project ADuC7124.jflash<br>
+      New feature: Support for some new MCUs.</td>
+    </tr>
+    <tr> 
+      <td>V4.40c</td>
+      <td>Jan-24 2012</td>
+      <td>New feature: Added Infineon XMC4500<br>
+      New feature: Sample project XMC4500.jflash added.</td>
+    </tr>
+    <tr> 
+      <td>V4.36l</td>
+      <td>Dec-02 2011</td>
+      <td>Correction: It was not allowed to select "big endian" for Renesas RX devices. Fixed.<br>
+      Correction: If a project-relative script file path were used in the J-Flash CPU dialog, the path was not passed correctly to the DLL. Fixed</td>
+    </tr>
+    <tr> 
+      <td>V4.36j</td>
+      <td>Nov-18 2011</td>
+      <td>Correction: Some Freescale devices which are already supported, were not selectable. Fixed.<br>
+      Correction: Flash programming support for Freescale Kinetis K70 did not work correctly. Fixed.</td>
+    </tr>
+    <tr> 
+      <td>V4.36i</td>
+      <td>Nov-11 2011</td>
+      <td>New feature: Support for some new MCUs.<br>
+      New feature: Sample project S3FN41F.jflash added.<br>
+      Correction: J-Flash could crash if external flash memory required "soft unlocking" of flash sectors. Fixed.<br>
+      Correction: For ST STM32F407IG, STM32F407VG and STM32F407ZG J-Flash reported an incorrect flash size. Fixed.<br>
+      Correction: The following external NOR flash devices did not work properly. Fixed:<br>
+                 Eon EN29LV800BB, EN29LV800BT, EN29LV160BB, EN29LV160BT</td>
+    </tr>
+    <tr> 
+      <td>V4.36h</td>
+      <td>Nov-04 2011</td>
+      <td>Correction: J-Flash could crash when creating Flasher ARM data files if a custom RAMCode / Flash auto-detection setting was used. Fixed.</td>
+    </tr>
+    <tr> 
+      <td>V4.36</td>
+      <td>Nov-04 2011</td>
+      <td>New feature: Support for some new MCUs.</td>
+    </tr>
+    <tr> 
+      <td>V4.34c</td>
+      <td>Sep-06 2011</td>
+      <td>New feature: Support for some new MCUs.</td>
+    </tr>
+    <tr> 
+      <td>V4.34</td>
+      <td>Aug-26 2011</td>
+      <td>New feature: Support for some new MCUs.<br>
+          New feature: Sample projects added.<br>
+          Correction:  Flasher ARM stand-alone mode did not work properly. Fixed.
+      </td>
+    </tr>
+    <tr> 
+      <td>V4.32</td>
+      <td>Jul-29 2011</td>
+      <td>New feature: Support for some new flash devices.<br>
+          New feature: Flash programming support for Cortex-R4.<br>
+          Correction:  Unsecure for Energy Micro EFM32Gxxx and EFM32TGxxx devices did not work properly. Fixed.<br>
+          Correction:  J-Flash could crash when programming a LPC device and adding a valid checksum to the data which was programmed. Fixed.<br>
+          Correction:  Old J-Flash projects which were configured for "NXP (Philips)" devices were not opened correctly. Fixed.<br>
+      </td>
+    </tr>
+    <tr> 
+      <td>V4.20</td>
+      <td>Sep-10 2010</td>
+      <td>New feature: Support for some new flash devices.<br>
+      </td>
+    </tr>
+    <tr> 
+      <td>V4.12</td>
+      <td>Feb-26 2010</td>
+      <td>New feature: Multibank support for Flasher ARM added.<br>
+      </td>
+    </tr>
+    <tr> 
+      <td>V4.08a</td>
+      <td>Jun-29 2009</td>
+      <td>New feature: Support for some new flash devices.<br>
+      </td>
+    </tr>
+    <tr> 
+      <td>V4.06</td>
+      <td>Jun-03 2009</td>
+      <td>New feature: Support for some new flash devices.<br>
+      </td>
+    </tr>
+    <tr> 
+      <td>V4.04</td>
+      <td>Apr-09 2009</td>
+      <td>New feature: Support for some new flash devices.<br>
+          Correction:  Download to emulator did not work properly. Fixed.<br>
+      </td>
+    </tr>
+    <tr> 
+      <td>V4.00</td>
+      <td>Dec-16 2008</td>
+      <td>New feature: Support for Toshiba TMPM330.<br>
+          Correction:  CRC calculation did not work properly. Fixed.<br>
+          Correction:  "Verify CRC" hangs on last sector in some cases. Fixed.<br>
+          Correction:  Flash programming of SST flashes did not work properly. Fixed.<br>
+      </td>
+    </tr>
+    <tr> 
+      <td>V3.96a</td>
+      <td>Nov-05 2008</td>
+      <td>New feature: Support for some new flash devices.
+      </td>
+    </tr>
+    <tr> 
+      <td>V3.92</td>
+      <td>Sep-30 2008</td>
+      <td>New feature: Support for Flasher ARM.
+      </td>
+    </tr>
+    <tr> 
+      <td>V3.90b</td>
+      <td>Aug-22 2008</td>
+      <td>Correction: Target CPU was not halted automatically. Fixed.
+      </td>
+    </tr>
+    <tr> 
+      <td>V3.90</td>
+      <td>Aug-11 2008</td>
+      <td>New feature: Support for some new flash devices.<br>
+          New feature: Support for some new ST devices.
+      </td>
+    </tr>
+    <tr> 
+      <td>V3.82</td>
+      <td>May-16 2008</td>
+      <td>New feature: Support for some new flash devices.
+      </td>
+    </tr>
+    <tr> 
+      <td>V3.80</td>
+      <td>Mar-07 2008</td>
+      <td>New feature: Support for SWD (Serial Wire Debug).
+      </td>
+    </tr>
+    <tr> 
+      <td>V3.78a</td>
+      <td>Dec-04 2007</td>
+      <td>New feature: Support for some new flash devices.<br>
+          New feature: Support for Cortex-M3 devices.<br>
+          New feature: Support for ADuC7060 devices.<br>
+          New feature: Support for custom RAMCode.<br>
+          Improvement: Programming of second flash bank of ST STR91x devices.<br>
+          Improvement: Auto detection of JTAG scan chain configuration.
+      </td>
+    </tr>
+    <tr> 
+      <td>V3.74e</td>
+      <td>Aug-09 2007</td>
+      <td>New feature: Support for some new flash devices.
+      </td>
+    </tr>
+    <tr> 
+      <td>V3.74d</td>
+      <td>Jul-27 2007</td>
+      <td>New feature: Support for some new flash devices.<br>
+          Correction:  Open *.bin files from commandline did not work properly. Fixed.
+      </td>
+    </tr>
+    <tr> 
+      <td>V3.74a</td>
+      <td>Jul-11 2007</td>
+      <td>New feature: Option to select either engineering or simplified user interface mode.<br>
+          Correction:  Flash programming for Atmel AT91SAM7A3 did not work properly. Fixed.
+      </td>
+    </tr>
+    <tr> 
+      <td>V3.72c</td>
+      <td>Jul-04 2007</td>
+      <td>Improvement: RAMCode for Atmel AT91SAM7 series improved.
+      </td>
+    </tr>
+    <tr> 
+      <td>V3.72a</td>
+      <td>Jun-18 2007</td>
+      <td>New feature: Support for some new Atmel devices.<br>
+          New feature: Support for some new flash devices.<br>
+          Correction: Chip erase on old ADuC702x devices did not work properly. Fixed.<br>
+          Correction: Verify CRC did not work properly in all cases. Fixed.
+      </td>
+    </tr>
+    <tr> 
+      <td>V3.70a</td>
+      <td>May-15 2007</td>
+      <td>Improvement: New reset strategy for AT91SAM7 MCU's.
+      </td>
+    </tr>
+    <tr> 
+      <td>V3.68a</td>
+      <td>Mar-30 2007</td>
+      <td>New feature: Support for some new NXP devices.
+      </td>
+    </tr>
+    <tr> 
+      <td>V3.66a</td>
+      <td>Mar-19 2007</td>
+      <td>New feature: Support for some new flash devices.
+      </td>
+    </tr>
+    <tr> 
+      <td>V3.64a</td>
+      <td>Mar-08 2007</td>
+      <td>Correction: Hex file parsing did not work properly. Fixed.
+      </td>
+    </tr>
+    <tr> 
+      <td>V3.62a</td>
+      <td>Feb-23 2007</td>
+      <td>New feature: Support for some new Atmel SAM7 devices.
+      </td>
+    </tr>
+    <tr> 
+      <td>V3.60a</td>
+      <td>Feb-09 2007</td>
+      <td>New feature: Verifying CRC of target instead of read back entire program.<br>
+          New feature: New menu entry "File|Merge..." allows merging of data files.<br>
+          New feature: Actions performed on "Auto" command can be configured.<br>
+          Improvement: Data window allows to edit items in gap areas.
+      </td>
+    </tr>
+    <tr> 
+      <td>V3.58a</td>
+      <td>Dec-22 2006</td>
+      <td>Correction: Old reset commands of CPU init sequence did not work. Fixed.
+      </td>
+    </tr>
+    <tr> 
+      <td>V3.56b</td>
+      <td>Dec-01 2006</td>
+      <td>Improvement: Feed watchdog for TI TMS470 devices.
+      </td>
+    </tr>
+    <tr> 
+      <td>V3.56a</td>
+      <td>Nov-30 2006</td>
+      <td>New feature: Support for some new NXP (Philips) LPC devices.<br>
+          New feature: Support for some new flash devices.<br>
+          New feature: Automatically correction of PLL settings for TI TMS470 series.<br>
+          New feature: Identification of flash devices by flash ID look up.<br>
+          Improvement: Auto unlock flash sectors for Intel flashes and STR7 devices.<br>
+          Improvement: RAM check with auto RAM size detection.
+      </td>
+    </tr>
+    <tr> 
+      <td>V3.52a</td>
+      <td>Nov-16 2006</td>
+      <td>New feature: Automatic CPU clock frequency detection.
+      </td>
+    </tr>
+    <tr> 
+      <td>V3.50a</td>
+      <td>Oct-17 2006</td>
+      <td>Minor improvements.
+      </td>
+    </tr>
+    <tr> 
+      <td>V3.46a</td>
+      <td>Sep-29 2006</td>
+      <td>Support for some new ST STR73xF devices added.
+      </td>
+    </tr>
+    <tr> 
+      <td>V3.44a</td>
+      <td>Sep-21 2006</td>
+      <td>Support for ST STR75xF devices added.
+      </td>
+    </tr>
+    <tr> 
+      <td>V3.42b</td>
+      <td>Sep-13 2006</td>
+      <td>Improved performance of verify data.
+      </td>
+    </tr>
+    <tr> 
+      <td>V3.42a</td>
+      <td>Sep-12 2006</td>
+      <td>Support for some new flash devices added.<br>
+          Data files are displayed in target endianess.
+      </td>
+    </tr>
+    <tr> 
+      <td>V3.40a</td>
+      <td>Aug-21 2006</td>
+      <td>Support for some new flash devices added.
+      </td>
+    </tr>
+    <tr> 
+      <td>V3.38a</td>
+      <td>Aug-16 2006</td>
+      <td>Support for some new flash devices added.
+      </td>
+    </tr>
+    <tr> 
+      <td>V3.36a</td>
+      <td>Aug-01 2006</td>
+      <td>Support for some new flash devices added.
+      </td>
+    </tr>
+    <tr> 
+      <td>V3.32a</td>
+      <td>Jul-24 2006</td>
+      <td>Support for unsecuring MAC71xx devices added.
+      </td>
+    </tr>
+    <tr> 
+      <td>V3.30a</td>
+      <td>Jun-19 2006</td>
+      <td>Improved performance since new DLL is used.<br>
+          Support for OKI ML67Q40xx devices added.
+      </td>
+    </tr>
+    <tr> 
+      <td>V3.24a</td>
+      <td>May-31 2006</td>
+      <td>Support for some new flash devices.<br>
+          Improved performance since new DLL is used.
+      </td>
+    </tr>
+    <tr> 
+      <td>V3.20a</td>
+      <td>Apr-27 2006</td>
+      <td>Support for CFI compliant flash devices.<br>
+          Support for some new flash devices.<br>
+          Support for securing / unsecuring flash memory.<br>
+          Some improvements.
+      </td>
+    </tr>
+    <tr> 
+      <td>V3.14a</td>
+      <td>Mar-14 2006</td>
+      <td>Improved handling of AT91SAM7A3.<br>
+          Watchdog refresh for ADuC703x devices.
+      </td>
+    </tr>
+    <tr> 
+      <td>V3.12e</td>
+      <td>Mar-07 2006</td>
+      <td>Minor improvements.
+      </td>
+    </tr>
+    <tr> 
+      <td>V3.12d</td>
+      <td>Feb-28 2006</td>
+      <td>Minor improvements.
+      </td>
+    </tr>
+    <tr> 
+      <td>V3.12c</td>
+      <td>Feb-24 2006</td>
+      <td>Minor improvements.
+      </td>
+    </tr>
+    <tr> 
+      <td>V3.12b</td>
+      <td>Feb-24 2006</td>
+      <td>Program correction in JLinkRDI.
+      </td>
+    </tr>
+    <tr> 
+      <td>V3.12a</td>
+      <td>Feb-23 2006</td>
+      <td>Added support for some new flash devices.<br>
+          Minor improvements.
+      </td>
+    </tr>
+    <tr> 
+      <td>V3.10e</td>
+      <td>Feb-21 2006</td>
+      <td>Improved memory access.<br>
+          Improved JTAG handling.
+      </td>
+    </tr>
+    <tr> 
+      <td>V3.10c</td>
+      <td>Feb-10 2006</td>
+      <td>Minor improvements.
+      </td>
+    </tr>
+    <tr> 
+      <td>V3.10b</td>
+      <td>Feb-09 2006</td>
+      <td>Minor improvements.
+      </td>
+    </tr>
+    <tr> 
+      <td>V3.10a</td>
+      <td>Feb-08 2006</td>
+      <td>Calculate CRC when opening data files.<br>
+          Added support for some new flash devices.
+      </td>
+    </tr>
+    <tr> 
+      <td>V3.00h</td>
+      <td>Feb-02 2006</td>
+      <td>Minor improvements.
+      </td>
+    </tr>
+    <tr> 
+      <td>V3.00g</td>
+      <td>Jan-30 2006</td>
+      <td>Some performance improvements.
+      </td>
+    </tr>
+    <tr> 
+      <td>V3.00d</td>
+      <td>Jan-13 2006</td>
+      <td>New software package.<br>
+          Some performance improvements.<br>
+          Added support for some new flash devices / MCUs.
+      </td>
+    </tr>
+    <tr> 
+      <td>V2.16c</td>
+      <td>Dec-02 2005</td>
+      <td>Added support for new flash devices.</td>
+    </tr>
+    <tr> 
+      <td>V2.16b</td>
+      <td>Nov-10 2005</td>
+      <td>Program correction: Serial number problem</td>
+    </tr>
+    <tr> 
+      <td>V2.16a</td>
+      <td>Nov-08 2005</td>
+      <td>Support for adaptive clocking.</td>
+    </tr>
+    <tr> 
+      <td>V2.14a</td>
+      <td>Oct-25 2005</td>
+      <td>Added support for new MCUs devices.<br>
+          Some performance improvements.<br>
+          Check if program area is empty before program.
+      </td>
+    </tr>
+    <tr> 
+      <td>V2.12b</td>
+      <td>Oct-10 2005</td>
+      <td>Added new function "Disable MMU" to init sequence editor.</td>
+    </tr>
+    <tr> 
+      <td>V2.12a</td>
+      <td>Oct-04 2005</td>
+      <td>Added some new MCUs.<br>
+          Programming of some Intel flashes accelerated.
+      </td>
+    </tr>
+    <tr> 
+      <td>V2.10a</td>
+      <td>Sep-22 2005</td>
+      <td>Added several new flash devices and some MCUs.<br>
+          Display current address during program or verify in progbar window.<br>
+          Change default settings: "Skip blank areas" is enabled.<br>
+          Data file handling accelerated.<br>
+          Rename STR710FR to STR710FZ (correct device name).
+      </td>
+    </tr>
+    <tr> 
+      <td>V2.04b</td>
+      <td>Sep-01 2005</td>
+      <td>Added new project files for AT91RM9200.<br>
+          Automatically unlock sectors before erase or program.</td>
+    </tr>
+    <tr> 
+      <td>V2.04a</td>
+      <td>Aug-19 2005</td>
+      <td>Latest DLL with some improvements added.<br>
+          New flash chips supported.</td>
+    </tr>
+    <tr> 
+      <td>V2.02a</td>
+      <td>Aug-05 2005</td>
+      <td>Command line option added.</td>
+    </tr>
+    <tr> 
+      <td>V2.00b</td>
+      <td>Jul-13 2005</td>
+      <td>Minor improvements.</td>
+    </tr>
+    <tr> 
+      <td>V2.00a</td>
+      <td>Jul-12 2005</td>
+      <td>Latest DLL with some improvements added.</td>
+    </tr>
+    <tr> 
+      <td>V2.00</td>
+      <td>Jul-07 2005</td>
+      <td>Added menu item 'help' to open user manual.<br>
+          New license management system.<br>
+          Improved erase algorithm for some Atmel flash devices.</td>
+    </tr>
+    <tr> 
+      <td>V1.36g</td>
+      <td>Jun-23 2005</td>
+      <td>Added a new project and a new flash device.</td>
+    </tr>
+    <tr> 
+      <td>V1.36f</td>
+      <td>Jun-13 2005</td>
+      <td>Divided all Analog Devices microcontrollers in different Revision steps.</td>
+    </tr>
+    <tr> 
+      <td>V1.36e</td>
+      <td>Jun-09 2005</td>
+      <td>Improved support for Intel flash chips.</td>
+    </tr>
+    <tr> 
+      <td>V1.36b</td>
+      <td>May-24 2005</td>
+      <td>Improved support for 2x 16bit configuration with Intel flash chips.<br>
+          Improved support for big endian devices.</td>
+    </tr>
+    <tr> 
+      <td>V1.36a</td>
+      <td>May-20 2005</td>
+      <td>Add ability to connect with J-Link via TCP/IP.<br>
+          Add project for NetSilicon NS9360 eval. board.<br>
+          Add flash devices (M29DW323Dx / M29DW324Dx / M29DW640D).</td>
+    </tr>
+    <tr> 
+      <td>V1.34a</td>
+      <td>May-17 2005</td>
+      <td>Handling of scan chains with multiple devices.<br>
+          Support for Philips LPC 213x series.<br>
+          Minor program corrections.</td>
+    </tr>
+    <tr> 
+      <td>V1.32a</td>
+      <td>April-22 2005</td>
+      <td>Beta support for TI TMS470R1 A128/A256.<br>
+          New menu points "Read back sectors" and "Read back chip".</td>
+    </tr>
+    <tr> 
+      <td>V1.30a</td>
+      <td>March-18 2005</td>
+      <td>Support for second flash bank of STR71x series.<br>
+          New flash devices and MCUs supported.<br>
+          Minor program corrections.</td>
+    </tr>
+    <tr> 
+      <td>V1.28d</td>
+      <td>March-11 2005</td>
+      <td>Support for Pyhtec LPC2294 with external flash.</td>
+    </tr>
+    <tr> 
+      <td>V1.28c</td>
+      <td>March-10 2005</td>
+      <td>Full support for Samsung S3F445HX.</td>
+    </tr>
+    <tr> 
+      <td>V1.28b</td>
+      <td>March-09 2005</td>
+      <td>Improved support for Samsung S3F445HX.</td>
+    </tr>
+    <tr> 
+      <td>V1.28a</td>
+      <td>March-03 2005</td>
+      <td>Support for ATMEL SAM7 S32/S128/S256.<br>
+          Support for ST STR711 / STR712.<br>
+          Beta support for Samsung S3F445HX.
+      </td>
+    </tr>
+    <tr> 
+      <td>V1.26a</td>
+      <td>Feb-25 2005</td>
+      <td>Added full support for ATMEL's SAM7.</td>
+    </tr>
+    <tr> 
+      <td>V1.24c</td>
+      <td>Feb-18 2005</td>
+      <td>Improved support for ATMEL's SAM7S64 chip.</td>
+    </tr>
+    <tr> 
+      <td>V1.24b</td>
+      <td>Feb-15 2005</td>
+      <td>Minor changes in JLinkARM.dll</td>
+    </tr>
+    <tr> 
+      <td>V1.24a</td>
+      <td>Feb-03 2005</td>
+      <td>Support for Analog Devices ADuC7020.</td>
+    </tr>
+    <tr> 
+      <td>V1.22a</td>
+      <td>Jan-26 2005</td>
+      <td>Lock/unlock support for some devices.<br>
+          Support for binary files.<br>
+          Export of setup files.<br>
+          MCU selection.<br>
+          Minor bug fixes.
+      </td>
+    </tr>
+    <tr> 
+      <td>V1.20b</td>
+      <td>Dec-21 2004</td>
+      <td>Beta support for ATMEL's SAM7S64 chip.</td>
+    </tr>
+    <tr> 
+      <td>V1.20a</td>
+      <td>Dec-14 2004</td>
+      <td>Menu point "EDIT | Eliminate blank areas" implemented.</td>
+    </tr>
+    <tr> 
+      <td>V1.18a</td>
+      <td>Nov-17 2004</td>
+      <td>First version with release history</td>
+    </tr>
+  </table>
+  <!-------------------------------------------------------------------------->
+  <!-- MISCELLANEOUS                                                        -->
+  <!-------------------------------------------------------------------------->
+  <h1 class="newsbox"><a name="misc">Miscellaneous</a></h1>
+  <p class="maintext">
+    This document was first released with version 1.18a of the software.<br>
+    Software released earlier is documented internally.<br>
+    This information is available at request.
+  </p>
+  <!--  Modifiable information ends here   ----------------------------------------->
+  <hr>
+  <p class="maintext">
+    Copyright 2001-2011 SEGGER Microcontroller GmbH & Co. KG. All rights reserved.<br>
+    For more information, please visit our website <a href ="http://www.segger.com/">www.segger.com</a> or contact us at <a href ="mailto:info@segger.com">info@segger.com</a><br>
+  </p>
+</body>
+</html>

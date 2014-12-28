@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="JLinkDebugAdaptorPackage">
+  <Name>JLink Debug Adaptor</Name>
+  <Version>4.9.6</Version>
+  <Description>Installs the JLink Debug interface to allow debugging of any project.</Description>
+  <RepoUri>https://github.com/danwalmsley/VEJlinkAdaptor.git</RepoUri>
+  <Executable>JLinkGDBServerCL.exe</Executable>
+</Package>
