@@ -1,4 +1,4 @@
-  AppVersion = 47000
+  AppVersion = 49711
 [GENERAL]
   ConnectMode = 0
   CurrentFile = ""
@@ -25,7 +25,7 @@
   ClockSpeed = 0x00000000
   Core = 0x030000FF
   CoreID = 0x4BA00477
-  CoreIDMask = 0xFFFFFFFF
+  CoreIDMask = 0x0F000FFF
   DeviceFamily = 0x00000003
   EndianMode = 0
   HasInternalFlash = 1
@@ -38,7 +38,7 @@
   RAMAddr = 0x20000000
   RAMSize = 0x00004000
   ScriptFile = ""
-  UseAutoSpeed = 0x00000000
+  UseAutoSpeed = 0x00000001
   UseRAM = 1
   UseScriptFile = 0
 [FLASH]
