@@ -36,7 +36,7 @@
 
 <body bgcolor="#FFFFFF">
   <!--  Modifiable information starts here ----------------------------------------->
-  <h2>Release notes for J-Flash V4.98</h2>
+  <h2>Release notes for J-Flash V5.00c</h2>
   <p class="maintext"></p>
   <ol class="maintext">
     <li><a href=#features>New features</a></li>
@@ -1828,6 +1828,29 @@
   <!-- PROGRAM CORRECTIONS                                                  -->
   <!-------------------------------------------------------------------------->
   <h1 class="newsbox"><a name="pcorr">Program corrections</a></h1>
+
+  <h2 class="heading2">Version 5.00c (2015-06-11)</h2>
+  <ol class="maintext">
+        <li>DLL/J-Flash: Selecting an ST STM32F427xI / STM32F429xI device could cause an internal error of type MEM_MAP_AddRegion() or an memory allocation error. Fixed. Other STM series were not affected by this problem.</li>
+        <li>DLL/J-Flash: Selecting a Renesas R5F51104, R5F51114 or R5F564MF lead to the error message "MEM_MAP_AddRegion Function called with start address greater than end address". Fixed. Other devices were not affected by this problem.</li>
+        <li>DLL/J-Flash: Selecting a SiLabs SiM3C, SiM3L or SiM3U series device, could lead to the error message "Buffer overflow in memory block (1 bytes overflowed)" . Fixed. Other device series were not affected by this problem.</li>
+        <li>DLL/J-Flash: Selecting the NXP PCF87750 as device could lead to a misleading error message regarding a pointer being invalid. Fixed. Other devices were not affected by this problem.</li>
+        <li>J-Flash: Sectorization of Renesas R5F51104, R5F51114 and R5F564MF was incorrect. Fixed.</li>
+  </ol>
+  <h2 class="heading2">Version 5.00b (2015-06-10)</h2>
+  <ol class="maintext">
+        <li>DLL: Exec SetRXIDCode did not work properly. Fixed.</li>
+        <li>DLL: QSPI flash programming: Improved read speed on Renesas RZ devices.</li>
+        <li>DLL: QSPI flash programming: Macronix flash devices were not handled correctly. Fixed.</li>
+        <li>DLL: Flash programming for flashes > 1 MB could fail (e.g. STM32F429 series was affected by this). Introduced in V5.00 with QSPI flash support. Fixed.</li>
+        <li>DLL: Renesas RX via FINE: Auto-enable of ongoing debug mode (caused flash programming internally) could fail. Introduced in V5.00 with QSPI flash support. Fixed.</li>
+        <li>DLL: Renesas RX R5F56138 devices with ID 0x0D018447 were detected incorrectly. Fixed.</li>
+        <li>J-Flash/DLL: Under special circumstances, flash programming of Analog Devices ADuCM350 did not work properly. Fixed.</li>
+  </ol>
+  <h2 class="heading2">Version 5.00a (2015-06-09)</h2>
+  <ol class="maintext">
+        <li>J-Flash/DLL: When performing a reset on an empty Kinetis K-series device, subsequent flash programming could fail. Introduced in V5.00 (when performing changes to support a new derivative from the V-series). Fixed.</li>
+  </ol>
   <h2 class="heading2">Version 5.00 (2015-06-08)</h2>
   <ol class="maintext">
         <li>DLL/J-Flash: Flash read back of empty Toshiba TZ100x devices, did not work correctly. Fixed.</li>
